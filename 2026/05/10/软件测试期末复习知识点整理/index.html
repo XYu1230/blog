@@ -1,0 +1,1221 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>软件测试期末复习知识点整理 | XYu1230的技术博客</title><meta name="author" content="XYu1230"><meta name="copyright" content="XYu1230"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#fcfcf8"><meta name="description" content="转自: https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_47959003&#x2F;article&#x2F;details&#x2F;124460853 目录 1、软件测试基础 1.1软件概述 1.1.1软件的生命周期 1.1.2 软件开发模型 1.1.3 软件质量概述 1.2 软件缺陷管理 1.2.1 软件缺陷产生的原因 1.2.2 软件缺陷的分类  1.2.3 软件缺陷的处理流程 1.3 软件测试概述 1.3.1 软">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件测试期末复习知识点整理">
+<meta property="og:url" content="https://xyu1230.github.io/blog/2026/05/10/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/index.html">
+<meta property="og:site_name" content="XYu1230的技术博客">
+<meta property="og:description" content="转自: https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_47959003&#x2F;article&#x2F;details&#x2F;124460853 目录 1、软件测试基础 1.1软件概述 1.1.1软件的生命周期 1.1.2 软件开发模型 1.1.3 软件质量概述 1.2 软件缺陷管理 1.2.1 软件缺陷产生的原因 1.2.2 软件缺陷的分类  1.2.3 软件缺陷的处理流程 1.3 软件测试概述 1.3.1 软">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/XYu1230/blog@master/source/images/avatar.jpg">
+<meta property="article:published_time" content="2026-05-10T09:05:35.000Z">
+<meta property="article:modified_time" content="2026-05-10T09:07:06.770Z">
+<meta property="article:author" content="XYu1230">
+<meta property="article:tag" content="技术博客,编程,开发">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/XYu1230/blog@master/source/images/avatar.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "软件测试期末复习知识点整理",
+  "url": "https://xyu1230.github.io/blog/2026/05/10/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/",
+  "image": "https://cdn.jsdelivr.net/gh/XYu1230/blog@master/source/images/avatar.jpg",
+  "datePublished": "2026-05-10T09:05:35.000Z",
+  "dateModified": "2026-05-10T09:07:06.770Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "XYu1230",
+      "url": "https://xyu1230.github.io/blog"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/blog/img/favicon.png"><link rel="canonical" href="https://xyu1230.github.io/blog/2026/05/10/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/blog/css/index.css?v=5.5.4-b1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1a1a1a')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fcfcf8')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '软件测试期末复习知识点整理',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><style>#page-header.full_page #site-title{color:#333!important;text-shadow:none!important}#page-header.full_page #site-subtitle{color:#666!important;text-shadow:none!important}#page-header.full_page #site_social_icons .social-icon{color:#555!important;text-shadow:none!important}#page-header.full_page #site_social_icons .social-icon:hover{color:#333!important}#page-header.full_page #scroll-down .scroll-down-effects{color:#666!important}#page-header.full_page #site-avatar .site-avatar-img{border:3px solid rgba(139,115,85,0.3)!important}</style><meta name="generator" content="Hexo 8.1.1"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      if ($loadingBox.classList.contains('loaded')) return
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+
+  if (document.readyState === 'complete') {
+    preloader.endLoading()
+  } else {
+    window.addEventListener('load', preloader.endLoading)
+    document.addEventListener('DOMContentLoaded', preloader.endLoading)
+    // Add timeout protection: force end after 7 seconds
+    setTimeout(preloader.endLoading, 7000)
+  }
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div class="bg-animation" id="web_bg" style="background-color: #F0EEE6;"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://cdn.jsdelivr.net/gh/XYu1230/blog@master/source/images/avatar.jpg" onerror="this.onerror=null;this.src='/blog/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background: linear-gradient(to bottom, #F0EEE6, #F0EEE6);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/blog/"><span class="site-name">XYu1230的技术博客</span></a><a class="nav-page-title" href="/blog/"><span class="site-name">软件测试期末复习知识点整理</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">软件测试期末复习知识点整理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-05-10T09:05:35.000Z" title="发表于 2026-05-10 17:05:35">2026-05-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-10T09:07:06.770Z" title="更新于 2026-05-10 17:07:06">2026-05-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p> 转自: <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_47959003/article/details/124460853">https://blog.csdn.net/qq_47959003/article/details/124460853</a></p>
+<p><strong>目录</strong></p>
+<p><a href="#t0">1、软件测试基础</a></p>
+<p><a href="#t1">1.1软件概述</a></p>
+<p><a href="#t2">1.1.1软件的生命周期</a></p>
+<p><a href="#t3">1.1.2 软件开发模型</a></p>
+<p><a href="#t4">1.1.3 软件质量概述</a></p>
+<p><a href="#t5">1.2 软件缺陷管理</a></p>
+<p><a href="#t6">1.2.1 软件缺陷产生的原因</a></p>
+<p><a href="#t7">1.2.2 软件缺陷的分类</a></p>
+<p> <a href="#t8">1.2.3 软件缺陷的处理流程</a></p>
+<p><a href="#t9">1.3 软件测试概述</a></p>
+<p><a href="#t10">1.3.1 软件测试简介</a></p>
+<p><a href="#t11">1.3.2 软件测试的目的</a></p>
+<p><a href="#t12">1.3.3 软件测试的分类</a></p>
+<p><a href="#t13">1.4 软件测试与软件开发</a></p>
+<p><a href="#t14">1.4.1软件测试与软件开发的关系</a></p>
+<p><a href="#t15">1.4.2 常见的软件测试模型</a></p>
+<p><a href="#t16">1.5 软件测试的原则</a></p>
+<p><a href="#t17">1.6 软件测试的基本流程</a></p>
+<p><a href="#t18">2. 黑盒测试方法</a></p>
+<p><a href="#t19">2.1 等价类划分法</a></p>
+<p><a href="#t20">2.1.1 等价类划分法概述</a></p>
+<p><a href="#t21">2.1.2  三角形问题的等价类划分</a></p>
+<p><a href="#t22">2.2 边界值分析法</a></p>
+<p><a href="#t23">2.2.1 边界值分析法概述</a></p>
+<p><a href="#t24">2.2.2 三角形问题边界值分析</a></p>
+<p><a href="#t25">2.3 因果图与决策表法</a></p>
+<p><a href="#t26">2.3.1 因果图设计法</a></p>
+<p><a href="#t27">2.3.2 决策表（判定表）</a></p>
+<p><a href="#t28">2.3.3 三角形决策表</a></p>
+<p> <a href="#t29">2.4 正交实验设计法</a></p>
+<p><a href="#t30">3. 白盒测试</a></p>
+<p><a href="#t31">3.1 逻辑覆盖法</a></p>
+<p><a href="#t32">3.1.1 语句覆盖</a></p>
+<p><a href="#t33">3.1.2 判定覆盖</a></p>
+<p><a href="#t34">3.1.3 条件覆盖</a></p>
+<p><a href="#t35">3.1.4 判定-条件覆盖</a></p>
+<p><a href="#t36">3.1.5 条件组合覆盖</a></p>
+<p><a href="#t37">3.2 程序插桩法</a></p>
+<p><a href="#t38">3.2.1 目标代码插桩</a></p>
+<p><a href="#t39">3.2.2 源代码插桩</a></p>
+<p><a href="#t40">4. 性能测试</a></p>
+<p><a href="#t41">4.1 性能测试</a></p>
+<p><a href="#t42">4.2 性能测试的指标</a></p>
+<p><a href="#t43">4.3 性能测试的种类</a></p>
+<p><a href="#t44">4.4 性能测试流程</a></p>
+<p><a href="#t45">4.5 性能测试工具</a></p>
+<p><a href="#t46">4.5.1 LoadRunner</a></p>
+<p><a href="#t47">4.5.2 JMeter</a></p>
+<p><a href="#t48">5. 自动化测试</a></p>
+<p><a href="#t49">5.1 自动化概述</a></p>
+<p><a href="#t50">5.1.1 什么是自动化概述</a></p>
+<p><a href="#t51">5.1.2 自动化测试的基本流程</a></p>
+<p><a href="#t52">5.1.3 自动化测试实施策略</a></p>
+<p><a href="#t53">5.1.4 自动化测试的优势和劣势</a></p>
+<p><a href="#t54">5.2 自动化测试常见技术</a></p>
+<p><a href="#t55">5.3 自动化测试常用工具</a></p>
+<p><a href="#t56">5.4 持续集成测试</a></p>
+<p><a href="#t57">5.4.1 持续集成的概念</a></p>
+<p><a href="#t58">5.4.2 持续集成测试框架设计</a></p>
+<p><a href="#t59">5.5 自动化测试脚本</a></p>
+<p><a href="#t60">5.5.1 网页元素定位</a></p>
+<p><a href="#t61">5.5.2 具体定位操作</a></p>
+<p><a href="#t62">习题</a></p>
+<p><a href="#t63">习题1.</a></p>
+<p><a href="#t64">习题2.</a></p>
+<p><a href="#t65">习题3.</a></p>
+<p><a href="#t66">其他习题：</a></p>
+<hr>
+<p><strong>写在前面</strong>：<strong>要结课了整理了下笔记，祝逢考必过！</strong></p>
+<h2 id="1、软件测试基础"><a href="#1、软件测试基础" class="headerlink" title="1、软件测试基础"></a>1、软件测试基础</h2><h3 id="1-1软件-概述"><a href="#1-1软件-概述" class="headerlink" title="1.1软件 概述"></a>1.1软件 概述</h3><h4 id="1-1-1软件的生命周期"><a href="#1-1-1软件的生命周期" class="headerlink" title="1.1.1软件的生命周期"></a><strong>1.1.1软件的生命周期</strong></h4><pre><code>    （1） 概念：软件从“出生”到“消亡”的过程，称为 生命周期 。
+
+    （2）阶段划分：
+</code></pre>
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><caption>阶段划分</caption><tbody><tr><td style="width:30px;">1</td><td style="width:76px;">问题定义</td><td style="width:393px;">主要确定软件的开发目的和可行性</td></tr><tr><td style="width:30px;">2</td><td style="width:76px;">需求分析</td><td style="width:393px;">作用在整个软件的生命周期中，直接关系到后期的开发成功率。</td></tr><tr><td style="width:30px;">3</td><td style="width:76px;">软件设计</td><td style="width:393px;">在需求分析结果的基础上，对整个软件系统进行设计</td></tr><tr><td style="width:30px;">4</td><td style="width:76px;">软件开发</td><td style="width:393px;">选择语言开发，制定规范</td></tr><tr><td style="width:30px;">5</td><td style="width:76px;">软件测试</td><td style="width:393px;">查找软件设计与软件开发过程中存在的问题并加以修正</td></tr><tr><td style="width:30px;">6</td><td style="width:76px;">软件维护</td><td style="width:393px;">包括纠错性维护和改进型维护两方面，在软件生命周期中持续时间最长</td></tr></tbody></table>
+
+<h4 id="1-1-2-软件开发模型"><a href="#1-1-2-软件开发模型" class="headerlink" title="1.1.2 软件开发模型"></a>1.1.2 软件开发模型</h4><pre><code>    软件开发模型规定了软件开发遵循的步骤，是软件开发的导航图，能够清晰、直观地表达软件开发的全过程。
+</code></pre>
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><caption>软件开发模型</caption><tbody><tr><td style="width:20px;">1</td><td style="width:106px;">瀑布模型</td><td style="width:368px;"><p>（1）严格按照线性方式进行；</p><p>（2）无法适应用户需求的变更，增加了开发风险；</p><p>（3）要求每一个阶段必须有结果产出；</p></td></tr><tr><td style="width:20px;">2</td><td style="width:106px;">快速原型模型</td><td style="width:368px;"><p>（1）根据用户需求快速搭建一个软件原型</p><p>（2）克服了需求不明带来的风险</p><p>（3）适用于不能预先确定需求的软件项目</p><p>（4）不利于开发人员对产品进行扩展</p></td></tr><tr><td style="width:20px;">3</td><td style="width:106px;">迭代模型</td><td style="width:368px;"><p>（1）以组件的形式交付给客户</p><p>（2）可以很好地适应用户需求的变更</p><p>（3）降低了软件开发成本与风险</p><p>（4）有集成失败的风险</p><p>（5）容易失去对软件开发过程的整体控制</p></td></tr><tr><td style="width:20px;">4</td><td style="width:106px;">螺旋模型</td><td style="width:368px;"><p>（1）引入了其他模型所忽略的风险分析</p><p>（2）有助于将软件质量作为特殊目标融入产品开发之中</p><p>（3）成本易控制，用户常参与，项目不偏离</p></td></tr><tr><td style="width:20px;">5</td><td style="width:106px;">敏捷模型</td><td style="width:368px;"><p>（1）以用户的需求进化为核心</p><p>（2）采用迭代、循序渐进的方法进行软件开发</p><p>（3）及时响应客户需求的变更，不断适应新趋势</p><p>（4）但人员较多，面对面的有效沟通困难</p><p>（5）适用于小型项目的开发</p></td></tr></tbody></table>
+
+<h4 id="1-1-3-软件质量概述"><a href="#1-1-3-软件质量概述" class="headerlink" title="1.1.3 软件质量概述"></a>1.1.3 软件质量概述</h4><p>1.软件质量的概念</p>
+<pre><code>    软件质量是指软件产品满足基本需求及隐式需求的程度。可将软件质量分为三个层次：
+
+    （1）满足需求的规定
+
+    （2）满足用户需求
+
+    （3）满足用户隐式需求
+</code></pre>
+<p>2.软件质量模型</p>
+<pre><code>    评价软件质量的国际标准ISO/IEC 9126:1991，由六个特性组成。分别为：功能性、可靠性、可使用性、效率、可维护性、可移植性。
+</code></pre>
+<p>3.影响软件质量的因素</p>
+<pre><code>    （1）需求模糊
+
+    （2）软件开发缺乏规范性的指导
+
+    （3）软件开发人员问题
+
+    （4）缺乏软件质量控制管理
+</code></pre>
+<h3 id="1-2-软件缺陷管理"><a href="#1-2-软件缺陷管理" class="headerlink" title="1.2 软件缺陷管理"></a>1.2 软件缺陷管理</h3><h4 id="1-2-1-软件缺陷产生的原因"><a href="#1-2-1-软件缺陷产生的原因" class="headerlink" title="1.2.1 软件缺陷产生的原因"></a>1.2.1 软件缺陷产生的原因</h4><p>1.从产品内部方面：缺陷是产品开发或维护过程中存在的错误、毛病等各种问题。</p>
+<p>2.从产品外部方面：缺陷是系统运行过程中某种功能的失效或违背。</p>
+<p>3.软件缺陷产生的原因主要有：</p>
+<ul>
+<li>需求不明确</li>
+<li>软件结构复杂</li>
+<li>编码问题</li>
+<li>项目期限短</li>
+<li>使用新技术</li>
+</ul>
+<h4 id="1-2-2-软件缺陷的分类"><a href="#1-2-2-软件缺陷的分类" class="headerlink" title="1.2.2 软件缺陷的分类"></a>1.2.2 软件缺陷的分类</h4><p><img src="https://i-blog.csdnimg.cn/blog_migrate/f2b32d71a9467c5f8c563b3861857536.png"></p>
+<h4 id="1-2-3-软件缺陷的处理流程"><a href="#1-2-3-软件缺陷的处理流程" class="headerlink" title="1.2.3 软件缺陷的处理流程"></a>1.2.3 软件缺陷的处理流程</h4><p><img src="https://i-blog.csdnimg.cn/blog_migrate/3adb4fc0a4ba153cfd8e03d35769da7c.png"></p>
+<h3 id="1-3-软件测试概述"><a href="#1-3-软件测试概述" class="headerlink" title="1.3 软件测试概述"></a>1.3 软件测试概述</h3><h4 id="1-3-1-软件测试简介"><a href="#1-3-1-软件测试简介" class="headerlink" title="1.3.1 软件测试简介"></a>1.3.1 软件测试简介</h4><p> 软件测试定义：软件测试是使用人工或自动手段运行或测定某个系统的过程，其目的在于检验它是否满足规定的需求或是弄清楚预期结果与实际结果之间的差异。</p>
+<h4 id="1-3-2-软件测试的目的"><a href="#1-3-2-软件测试的目的" class="headerlink" title="1.3.2 软件测试的目的"></a>1.3.2 软件测试的目的</h4><p>1.对软件开发来说：软件测试通过找到的问题缺陷帮助开发人员找到开发过程中存在的问题，预防下次缺陷的产生。y</p>
+<p>2.对于软件测试来说：使用最少的人力、物力、财力、时间找到软件中隐藏的缺陷，保证软件的质量，为以后软件测试积累经验。</p>
+<p>3.对于客户需求来说：软件测试能够检测是否符合客户需求，对软件质量进行评估和度量，为客户评审软件提供有力的依据。</p>
+<h4 id="1-3-3-软件测试的分类"><a href="#1-3-3-软件测试的分类" class="headerlink" title="1.3.3 软件测试的分类"></a>1.3.3 软件测试的分类</h4><p>1.按照测试阶段分类</p>
+<ol>
+<li>单元测试                </li>
+<li>冒烟测试</li>
+<li>集成测试</li>
+<li>系统测试</li>
+<li>验收测试</li>
+</ol>
+<p>2.按照测试技术分类</p>
+<ul>
+<li>黑盒测试</li>
+<li>白盒测试</li>
+</ul>
+<p>3.按照软件质量特性分类</p>
+<ul>
+<li>功能测试</li>
+<li>性能测试</li>
+</ul>
+<p>4.按照自动化程度分类</p>
+<ul>
+<li>手工测试</li>
+<li>自动化测试</li>
+</ul>
+<p>5.按照测试类型分类</p>
+<ul>
+<li>界面类测试</li>
+<li>安全性测试</li>
+<li>文档测试</li>
+</ul>
+<h3 id="1-4-软件测试与软件开发"><a href="#1-4-软件测试与软件开发" class="headerlink" title="1.4 软件测试与软件开发"></a>1.4 软件测试与软件开发</h3><h4 id="1-4-1软件测试与软件开发的关系"><a href="#1-4-1软件测试与软件开发的关系" class="headerlink" title="1.4.1软件测试与软件开发的关系"></a>1.4.1软件测试与软件开发的关系</h4><p>1.软件测试在各个阶段的作用：</p>
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td style="width:171px;">项目规划阶段</td><td style="width:327px;">负责从单元测试到系统测试的整个测试阶段的监控</td></tr><tr><td style="width:171px;">需求分析阶段</td><td style="width:327px;">确定测试需求分析，同时制定系统测试计划</td></tr><tr><td style="width:171px;">概要设计与详细设计阶段</td><td style="width:327px;">制定单元测试计划和集成测试计划</td></tr><tr><td style="width:171px;">编码阶段</td><td style="width:327px;">开发相应的测试代码和测试脚本</td></tr><tr><td style="width:171px;">测试阶段</td><td style="width:327px;">实施测试并提交相应的测试报告</td></tr></tbody></table>
+
+<p>2.软件开发：自顶向下、逐步细化的过程。</p>
+<p>3.软件测试：自底向上、逐步集成的过程。</p>
+<h4 id="1-4-2-常见的软件测试模型"><a href="#1-4-2-常见的软件测试模型" class="headerlink" title="1.4.2 常见的软件测试模型"></a>1.4.2 常见的软件测试模型</h4><p>1.V模型</p>
+<pre><code>    描述了基本的开发过程与测试过程，主要反映了测试活动分析与设计之间的关系。
+</code></pre>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/f4094e10d7cb55baa195339266c313fb.png"></p>
+<p> 2.W模型</p>
+<pre><code>    由V模型演变而来，强调测试应伴随整个软件生命周期，有利于尽早的发现问题。
+</code></pre>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/05b3728e48e1dff9d6fb7702be97dfde.png"></p>
+<p> 3.H模型</p>
+<pre><code>    测试级别不存在严格的次序关系，软件生命周期的各阶段的测试工作可以反复触发、迭代、，即不同的测试可以反复迭代的进行。
+</code></pre>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/243796053504f1a03ca29e04127eb54f.png"></p>
+<p> 4.X模型</p>
+<pre><code>    X模型的设计原理是将程序分成多个片段反复迭代测试，然后将多个片段集成再进行迭代测试。
+</code></pre>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/66330ec5a87b7397503b52eee712f4da.png"></p>
+<h3 id="1-5-软件测试的原则"><a href="#1-5-软件测试的原则" class="headerlink" title="1.5 软件测试的原则"></a>1.5 软件测试的原则</h3><ol>
+<li>测试应基于客户需求</li>
+<li>测试要尽早进行</li>
+<li>穷尽测试是不可能的</li>
+<li>遵循GoodEnough原则（测试的投入与产出适当权衡）</li>
+<li>测试缺陷要符合“二八”定理（缺陷不是平均分布的，80%缺陷会集中在20%的模块中）</li>
+<li>避免缺陷免疫（定式思维所导致）</li>
+</ol>
+<h3 id="1-6-软件测试的基本流程"><a href="#1-6-软件测试的基本流程" class="headerlink" title="1.6 软件测试的基本流程"></a>1.6 软件测试的基本流程</h3><pre><code>    虽然不同软件的详细测试步骤不同，但它们所遵循的基本测试流程是一样的。
+</code></pre>
+<ol>
+<li>分析测试需求</li>
+<li>制定测试计划</li>
+<li>设计测试用例</li>
+<li>执行测试</li>
+<li>编写测试报告</li>
+</ol>
+<h2 id="2-黑盒测试方法"><a href="#2-黑盒测试方法" class="headerlink" title="2. 黑盒测试方法"></a>2. 黑盒测试方法</h2><h3 id="2-1-等价类划分法"><a href="#2-1-等价类划分法" class="headerlink" title="2.1 等价类划分法"></a>2.1 等价类划分法</h3><h4 id="2-1-1-等价类划分法概述"><a href="#2-1-1-等价类划分法概述" class="headerlink" title="2.1.1 等价类划分法概述"></a>2.1.1 等价类划分法概述</h4><pre><code>    一个程序可以有多个输入，等价类划分就是将这些输入数据按照输入需求进行分类，将他们划分为若干个子集，这些子集即为等价类。
+</code></pre>
+<p>1. 划分等价类</p>
+<p>（1）有效等价类：有效值的集合，他们是符合程序的要求、合理且有意义的输入数据。</p>
+<p>（2）无效等价类：无效值的集合，他们是不符合程序的要求，不合理或无意义的输入数据。</p>
+<p>2.设计测试用例</p>
+<pre><code>    基于等价类划分法的测试用例设计步骤如下：
+</code></pre>
+<ul>
+<li>（1）确定测试对象，保证非测试对象的正确性；</li>
+<li>（2）为每个等价类规定一个唯一编号；</li>
+<li>（3）设计有效等价类的测试用例，使其尽可能多的覆盖尚未覆盖的有效等价类；</li>
+<li>（4）设计无效等价类的测试用例，使其覆盖所有的无效等价类。</li>
+</ul>
+<h4 id="2-1-2-三角形问题的等价类划分"><a href="#2-1-2-三角形问题的等价类划分" class="headerlink" title="2.1.2  三角形问题的等价类划分"></a>2.1.2  三角形问题的等价类划分</h4><p>三角形输入等价类表</p>
+<p> <img src="https://i-blog.csdnimg.cn/blog_migrate/1b8d9be1d78eebace3dfd9fa26d83927.jpeg"></p>
+<p> 有效等价类的测试用例</p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/10bf72e50885e81ebc30c724c63a68ab.jpeg"></p>
+<p>无效等价类的测试用例</p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/705100450e4373c93ab0b19118ef4925.jpeg"></p>
+<h3 id="2-2-边界-值分析法"><a href="#2-2-边界-值分析法" class="headerlink" title="2.2 边界 值分析法"></a>2.2 边界 值分析法</h3><h4 id="2-2-1-边界值分析法概述"><a href="#2-2-1-边界值分析法概述" class="headerlink" title="2.2.1 边界值分析法概述"></a>2.2.1 边界值分析法概述</h4><pre><code>    边界值分析法是对软件的输入或输出边界进行测试的一种方法，它通常作为等价类划分法的一种补充测试。
+
+    在等价类中选择边界值时，如果输入条件规定了取值范围的值或个数，则在选取边界值时可选取5个或7个测试值。若为5个测试值：最小值、略大于最小值、正常值、略小于最大值、最大值。若为7个：则是在5的基础上增加略小于最小值和略大于最大值。
+
+    边界值作为一种单独的软件测试方法，它只在边界取值上考虑测试的有效性，相对于其他等价类划分法来说，他的执行更加简单易行，但缺乏充分性，不能全面的测试软件，**因此他只能作为等价类划分法的补充测试****。**
+</code></pre>
+<h4 id="2-2-2-三角形问题边界值分析"><a href="#2-2-2-三角形问题边界值分析" class="headerlink" title="2.2.2 三角形问题边界值分析"></a>2.2.2 三角形问题边界值分析</h4><p>三角形边界值分析测试用例</p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/65d895875d96241645becb982b006299.png"></p>
+<h3 id="2-3-因果图与决策表法"><a href="#2-3-因果图与决策表法" class="headerlink" title="2.3 因果图与决策表法"></a>2.3 因果图与决策表法</h3><pre><code>    描述多个输入之间的制约关系。
+</code></pre>
+<h4 id="2-3-1-因果图设计法"><a href="#2-3-1-因果图设计法" class="headerlink" title="2.3.1 因果图设计法"></a>2.3.1 因果图设计法</h4><pre><code>    因果图法是利用图解法分析各种组合情况的测试方法，它考虑了输入条件的各种组合及输出条件之间的相互制约关系，并考虑输出情况。
+</code></pre>
+<p>1.因果图</p>
+<pre><code>    包含四种关系：恒等、非、或、与。
+</code></pre>
+<p>2.因果图法设计测试用例特点</p>
+<pre><code>    （1）因果图法考虑了输入情况的各种组合以及各种输入情况之间的相互制约关系，可以帮助测试人员按照一定的步骤高效的开发测试用例。
+
+     （2）因果图是由自然语言规格说明转化成语言规格说明的一种严格方法，能够发现规格说明书中存在的不完整性和二义性，帮助开发人员完善产品的规格说明书。
+</code></pre>
+<h4 id="2-3-2-决策表（判定表）"><a href="#2-3-2-决策表（判定表）" class="headerlink" title="2.3.2 决策表（判定表）"></a>2.3.2 决策表（判定表）</h4><pre><code>    1.输入较多时，因果图比较复杂，因此往往使用决策表法替代因果图法。
+
+    2.它可以把复杂的逻辑关系和多种条件组合的情况表达得既具体又明确。利于决策表可以设计出完整的测试用例集合。
+
+    3.决策表通常由四部分组成：条件桩、条件项、动作桩、动作项。
+</code></pre>
+<h4 id="2-3-3-三角形决策表"><a href="#2-3-3-三角形决策表" class="headerlink" title="2.3.3 三角形决策表"></a>2.3.3 三角形决策表</h4><pre><code>    三角形决策表
+</code></pre>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/e4f81b93acf418f2afb12f269eba72b4.png"></p>
+<p> 三角形测试用例</p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/f95f9809d7ff58ee357e96da87626c1b.jpeg"></p>
+<h3 id="2-4-正交实验设计法"><a href="#2-4-正交实验设计法" class="headerlink" title="2.4 正交实验设计法"></a>2.4 正交实验设计法</h3><pre><code>    正交实验设计法是指从大量的实验点中挑选出适量的、有代表性的点，依据Glois理论导出“正交表”，从而合理的安排实验的一种实验设计方法。
+
+    此法包含三个**关键因素**：
+</code></pre>
+<ol>
+<li>指标：判断实验优劣的标准；</li>
+<li>因子：所有影响实验指标的条件；</li>
+<li>因子的状态：指因子变量的取值；</li>
+</ol>
+<h2 id="3-白盒测试"><a href="#3-白盒测试" class="headerlink" title="3. 白盒测试"></a>3. 白盒测试</h2><pre><code>    白盒测试又称为透明盒测试、结构测试，它基于程序内部结构进行测试，而不是测试应用程序的功能。
+</code></pre>
+<h3 id="3-1-逻辑覆盖法"><a href="#3-1-逻辑覆盖法" class="headerlink" title="3.1 逻辑覆盖法"></a>3.1 逻辑覆盖法</h3><pre><code>    逻辑覆盖法是白盒测试最常用的测试方法，它包括语句覆盖、判定覆盖、条件覆盖、判定-条件覆盖5种。
+</code></pre>
+<h4 id="3-1-1-语句覆盖"><a href="#3-1-1-语句覆盖" class="headerlink" title="3.1.1 语句覆盖"></a>3.1.1 语句覆盖</h4><pre><code>    1.别称：行覆盖、段覆盖、基本块覆盖。
+
+    2.语句覆盖的目的是测试程序中的代码是否被执行，它只测试代码中的执行语句。
+
+    3.语句覆盖是弱覆盖方法。
+</code></pre>
+<h4 id="3-1-2-判定覆盖"><a href="#3-1-2-判定覆盖" class="headerlink" title="3.1.2 判定覆盖"></a>3.1.2 判定覆盖</h4><pre><code>    原则是设计足够多的测试用例，在测试的过程中保证每个判定至少有一次真值，有一次为假值。虽然判定语句覆盖比语句覆盖强，但仍然具有和语句覆盖一样的单一性。（弱覆盖）
+</code></pre>
+<h4 id="3-1-3-条件覆盖"><a href="#3-1-3-条件覆盖" class="headerlink" title="3.1.3 条件覆盖"></a>3.1.3 条件覆盖</h4><pre><code>    设计足够多的测试用例，使判定语句中的每个逻辑条件取真值与取假值至少出现一次。
+</code></pre>
+<h4 id="3-1-4-判定-条件覆盖"><a href="#3-1-4-判定-条件覆盖" class="headerlink" title="3.1.4 判定-条件覆盖"></a>3.1.4 判定-条件覆盖</h4><pre><code>    要求设计足够多的测试用例，是的判定语句中所有条件的可能取值至少出现一次，同时，所有判定语句的可能结果也至少出现一次。
+
+    弥补了条件覆盖和判定覆盖的不足，但是由于判定-条件覆盖没有考虑判定语句与条件判断的组合情况，其覆盖范围并没有比条件覆盖更全面。仍存在遗漏的情况。
+</code></pre>
+<h4 id="3-1-5-条件组合覆盖"><a href="#3-1-5-条件组合覆盖" class="headerlink" title="3.1.5 条件组合覆盖"></a>3.1.5 条件组合覆盖</h4><pre><code>    设计足够多的测试用例，使判定语句中每个条件的所有可能至少出现一次，并且每个判定语句本身的判定结果也至少出现一次。
+
+    与判定-条件覆盖相比，条件组合覆盖包括了所有判定-条件覆盖，因此它的覆盖范围更广。但是当程序中条件比较多的时候，条件组合会呈指数级增长，这样反而测试效率会降低。
+</code></pre>
+<h3 id="3-2-程序插桩法"><a href="#3-2-程序插桩法" class="headerlink" title="3.2 程序插桩法"></a>3.2 程序插桩法</h3><pre><code>    程序插桩就是往被测程序中插入测试代码以达到测试目的的方法，插入的测试代码被称为探针。根据测试代码插入的时间可以将程序插桩法分为**目标代码插桩和源代码插桩**。
+</code></pre>
+<h4 id="3-2-1-目标代码插桩"><a href="#3-2-1-目标代码插桩" class="headerlink" title="3.2.1 目标代码插桩"></a>3.2.1 目标代码插桩</h4><pre><code>    目标代码插桩是指向目标代码插入测试代码获取程序运行信息的测试方法，也称为动态程序分析方法。
+
+    相比于逻辑覆盖法，目标代码插桩在测试过程中不需要代码重新编译或链接程序，并且目标代码的格式和具体的编程语言无关，主要和操作系统相关，因此被广泛使用。
+</code></pre>
+<p>1.目标代码插桩的原理</p>
+<pre><code>    原理：在程序运行平台和底层操作系统之间建立中间层，通过中间层检查执行程序、修改指令。
+</code></pre>
+<p>2.目标代码插桩法的执行模式</p>
+<pre><code>    分为两种情况：
+</code></pre>
+<ul>
+<li><p>（1）对未运行的目标代码插桩，从头到尾测试代码，然后执行程序。</p>
+</li>
+<li><p>（2）向正在运行的程序插入测试代码，用来检测程序在特定时间的运行状态信息。</p>
+<pre><code>分为三种执行模式：
+</code></pre>
+</li>
+<li><p>（1）即时模式：原始的二进制或可执行文件没有被修改或执行，将修改部分的二进制代码生成文件副本存储在新的内存区域中，在测试时仅执行修改部分的目标代码。</p>
+</li>
+<li><p>（2）解释模式：在解释模式中目标代码被视为数据，测试通过替代指令指令的执行信息就可以获取程序的运行信息。</p>
+</li>
+<li><p>（3）探测模式：使用新指令覆盖旧指令进行测试。</p>
+</li>
+</ul>
+<p>3.由于目标程序是可执行的二进制文件，人工插入代码是无法实现的，因此目标代码插桩一般通过相应的插桩工具实现。</p>
+<h4 id="3-2-2-源代码插桩"><a href="#3-2-2-源代码插桩" class="headerlink" title="3.2.2 源代码插桩"></a>3.2.2 源代码插桩</h4><p>1. 源代码插桩是指对源文件进行完整的词法、语法分析后，确定插桩的位置，植入探针代码。</p>
+<p>2. 相比目标代码插桩：具有精确性和针对性。</p>
+<p>3. 源代码插桩是在程序执行之前完成的，因此源代码插桩在程序运行过程中会产生探针代码的开销。</p>
+<p>4.相比较目标代码插桩，源代码插桩实现复杂程度低，探针代码具有好的通用性（使用同一种语言编写的程序可以使用一个探针代码程序来完成测试）。</p>
+<blockquote>
+<p><strong>黑盒测试和白盒测试比较</strong></p>
+</blockquote>
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td style="width:74px;">测试种类</td><td style="text-align:center;width:210px;">发现缺陷/适用情况</td><td style="text-align:center;width:214px;">特点</td></tr><tr><td style="width:74px;">黑盒测试</td><td style="width:210px;"><p>（1）外部逻辑功能缺陷</p><p>（2）兼容性错误</p><p>（3）性能问题</p></td><td style="width:214px;">不用考虑内部逻辑结构，仅仅需要验证软件外部功能是否符合用户实际需求。</td></tr><tr><td style="width:74px;">白盒测试</td><td style="width:210px;"><p>（1）源程序中含有多个分支</p><p>（2）内存泄漏检查迅速</p></td><td style="width:214px;">可以设计用例尽可能覆盖程序中的分支语句，分析程序内部结构。</td></tr></tbody></table>
+
+<blockquote>
+<p><strong>测试阶段</strong></p>
+</blockquote>
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td style="width:75px;">测试名称</td><td style="text-align:center;width:208px;">测试对象</td><td style="text-align:center;width:216px;">测试方法</td></tr><tr><td style="width:75px;">单元测试</td><td style="text-align:center;width:208px;">模块功能</td><td style="text-align:center;width:216px;">白盒测试</td></tr><tr><td style="width:75px;">集成测试</td><td style="text-align:center;width:208px;">接口测试</td><td style="text-align:center;width:216px;">黑盒测试和白盒测试</td></tr><tr><td style="width:75px;">系统测试</td><td style="text-align:center;width:208px;">系统测试</td><td style="text-align:center;width:216px;">黑盒测试</td></tr><tr><td style="width:75px;">验收测试</td><td style="text-align:center;width:208px;">系统测试</td><td style="text-align:center;width:216px;">黑盒测试</td></tr></tbody></table>
+
+<h2 id="4-性能测试"><a href="#4-性能测试" class="headerlink" title="4. 性能测试"></a>4. 性能测试</h2><pre><code>    性能测试是度量软件质量的一种重要手段，他从响应速度、稳定性、兼容型、可移植性等方面检测软件是否满足用户需求。
+</code></pre>
+<h3 id="4-1-性能测试"><a href="#4-1-性能测试" class="headerlink" title="4.1 性能测试"></a>4.1 性能测试</h3><p>1.概述：使用性能测试工具模拟正常、峰值及异常负载状态，对系统的各项性能指标进行测试活动。</p>
+<p>2.作用：验证软件是否达到了用户期望的性能需求，同时也可以发现系统中可能存在的瓶颈及缺陷，从而优化系统的性能。</p>
+<p>3.目的：</p>
+<p>（1）验证系统性能是否满足预期的性能需求；</p>
+<p>（2）分析软件系统在各种负载水平下的运行转态，提高性能需求和效率；</p>
+<p>（3）识别系统缺陷，寻找系统中可能存在的性能问题；</p>
+<p>（4）系统调优，探测系统设计与资源之间的最佳平衡，改善并优化系统的性能。</p>
+<h3 id="4-2-性能测试的指标"><a href="#4-2-性能测试的指标" class="headerlink" title="4.2 性能测试的指标"></a>4.2 性能测试的指标</h3><p>性能测试常用的指标包括响应时间、吞吐量、并发用户数、TPS等。</p>
+<p><strong>1.响应时间</strong></p>
+<pre><code>    系统对用户请求做出响应所需要的时间。
+</code></pre>
+<p><strong>2.吞吐量</strong></p>
+<pre><code>    单位时间内系统能完成的工作量，他衡量的是软件系统服务器的处理能力。
+</code></pre>
+<p><strong>3.并发用户数</strong></p>
+<pre><code>    同一时间请求和访问的用户数量。
+</code></pre>
+<p><strong>4.TPS</strong></p>
+<pre><code>    系统每秒钟能够处理的事务和交易的数量。
+</code></pre>
+<p><strong>5.点击率</strong></p>
+<pre><code>    用户每秒向Web服务器提交的HTTP请求数，**这个指标是Web应用特有的一个性能指标**。
+</code></pre>
+<p><strong>6.资源利用率</strong></p>
+<pre><code>    软件对系统系统资源的使用情况，是**分析软件性能瓶颈的重要参数**。
+</code></pre>
+<h3 id="4-3-性能测试的种类"><a href="#4-3-性能测试的种类" class="headerlink" title="4.3 性能测试的种类"></a>4.3 性能测试的种类</h3><pre><code>    性能测试是一个统称，包含多种类型。主要有：
+</code></pre>
+<p><strong>1.负载测试</strong></p>
+<pre><code>    逐步增加系统负载，测试系统性能的变化，并最终确定在满足系统性能指标的情况下，系统能够承受的最大负载量。
+</code></pre>
+<p><strong>2.压力测试</strong></p>
+<pre><code>    逐步给系统增加压力，测试性能变化，使系统某些资源达到饱和或系统崩溃的边缘，从而测定系统所能承受的最大压力。
+</code></pre>
+<blockquote>
+<p><strong>ps:负载测试与压力测试的区别</strong></p>
+</blockquote>
+<p>例如：软件系统正常的响应时间为2s,负载测试时确定访问量超过1万时响应时间变慢。</p>
+<pre><code>       压力测试则继续增加用户的访问量，当用户增加到4万时，系统崩溃。
+</code></pre>
+<p>则可以确定，最大负载是1万人（开始影响性能），最大压力4万人（系统撑不住了）</p>
+<p>3.并发测试</p>
+<p>4.配置测试</p>
+<p>5.可靠性测试</p>
+<p>6.容量测试</p>
+<h3 id="4-4-性能测试流程"><a href="#4-4-性能测试流程" class="headerlink" title="4.4 性能测试流程"></a>4.4 性能测试流程</h3><ol>
+<li>分析性能测试需求</li>
+<li>制定性能测试计划</li>
+<li>设计性能测试用例</li>
+<li>编写性能测试脚本</li>
+<li>测试执行及监控</li>
+<li>运行结果分析</li>
+<li>提交性能测试报告</li>
+</ol>
+<h3 id="4-5-性能测试工具"><a href="#4-5-性能测试工具" class="headerlink" title="4.5 性能测试工具"></a>4.5 性能测试工具</h3><p>常用：LoadRunner和JMeter</p>
+<h4 id="4-5-1-LoadRunner"><a href="#4-5-1-LoadRunner" class="headerlink" title="4.5.1 LoadRunner"></a>4.5.1 LoadRunner</h4><p><strong>主要特点：</strong></p>
+<ul>
+<li>广泛支持业界标准协议</li>
+<li>支持多平台开发的脚本</li>
+<li>可创建真实的系统负载</li>
+<li>具有强大的实时监控与数据采集功能</li>
+<li>可以精确分析结果，定位软件问题</li>
+</ul>
+<p>**缺点：**收费</p>
+<p>**组成部分：**Virtual User Generator(简写VuGen)、Controller和Analysis。</p>
+<p><strong>作用：</strong></p>
+<p><strong>1.VuGen</strong></p>
+<pre><code>    用于创建虚拟用户脚本的工具，因此也被称为虚拟用户脚本生成器。
+</code></pre>
+<p><strong>2.Controller</strong></p>
+<pre><code>    用于创建和控制LoadRunner场景，场景负责定义每次测试中发生的事件。
+</code></pre>
+<p><strong>3.Analysis</strong></p>
+<pre><code>    数据分析工具，可以收集测试中的各种数据，对其进行分析生成图表和报告供测试人员查看。
+</code></pre>
+<h4 id="4-5-2-JMeter"><a href="#4-5-2-JMeter" class="headerlink" title="4.5.2 JMeter"></a>4.5.2 JMeter</h4><p>优势：开源免费。</p>
+<p>工作原理与LoadRunner类似，不同的是：JMeter通过线程创建虚拟用户。虚拟用户向服务器发送一个请求，JMeter称之为一次采样，这个操作由采样器完成。</p>
+<p>JMter工具核心组件：</p>
+<ol>
+<li>逻辑控制器</li>
+<li>配置元件</li>
+<li>前置处理器</li>
+<li>定时器</li>
+<li>采样器</li>
+<li>后置处理器</li>
+<li>断言</li>
+<li>监听器</li>
+</ol>
+<p>缺点：报表少、分析没有LoadRunner详细。</p>
+<h2 id="5-自动化测试"><a href="#5-自动化测试" class="headerlink" title="5. 自动化测试"></a>5. 自动化测试</h2><h3 id="5-1-自动化概述"><a href="#5-1-自动化概述" class="headerlink" title="5.1 自动化概述"></a>5.1 自动化概述</h3><h4 id="5-1-1-什么是自动化概述"><a href="#5-1-1-什么是自动化概述" class="headerlink" title="5.1.1 什么是自动化概述"></a>5.1.1 什么是自动化概述</h4><pre><code>    自动化测试，是把以人为驱动测试行为转化为机器执行的过程。实际上就是模拟手工测试过程。
+
+    实施自动化测试之前，需要对软件开发过程进行分析。需要满足的条件有：
+</code></pre>
+<ol>
+<li>项目需求变动不频繁</li>
+<li>项目周期足够长</li>
+<li>自动化测试脚本可重复使用</li>
+</ol>
+<h4 id="5-1-2-自动化测试的基本流程"><a href="#5-1-2-自动化测试的基本流程" class="headerlink" title="5.1.2 自动化测试的基本流程"></a>5.1.2 自动化测试的基本流程</h4><ol>
+<li>分析测试需求</li>
+<li>指定测试计划</li>
+<li>设计测试用例</li>
+<li>搭建测试环境</li>
+<li>编写并执行测试脚本</li>
+<li>分析测试结果、记录测试问题</li>
+<li>跟踪测试Bug</li>
+</ol>
+<h4 id="5-1-3-自动化测试实施策略"><a href="#5-1-3-自动化测试实施策略" class="headerlink" title="5.1.3 自动化测试实施策略"></a>5.1.3 自动化测试实施策略</h4><pre><code>    追求敏捷开发导致许多团队采用金字塔策略。
+</code></pre>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/c879cad4ee0f6a48c0b5c229a8c578e9.png"></p>
+<p><strong>1.单元测试</strong></p>
+<pre><code>    要求开发中对每个功能模块进行测试，通常采用白盒测试，主要对代码内部结构进行测试。
+</code></pre>
+<p><strong>2.接口测试</strong></p>
+<pre><code>    对数据传输、数据库性能等进行测试，通常使用白盒加黑盒的相结合形式进行。
+</code></pre>
+<p><strong>3.UI测试</strong></p>
+<pre><code>     以用户体验为主，不是完全通过自动化测试。
+</code></pre>
+<h4 id="5-1-4-自动化测试的优势和劣势"><a href="#5-1-4-自动化测试的优势和劣势" class="headerlink" title="5.1.4 自动化测试的优势和劣势"></a>5.1.4 自动化测试的优势和劣势</h4><pre><code>    自动化测试只是众多测试中的一种，并不比人工测试更高级更先进。
+</code></pre>
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td>优势</td><td>劣势</td></tr><tr><td>自动化测具有一致性和重复性，测试更客观，提高了软件测试的准确性、精确度和可信任度。</td><td>对测试团队的技术有更高的要求。</td></tr><tr><td>将任务自动化，解放人力。</td><td>无法替代人工测试找到Bug，也不能实现百分百覆盖。</td></tr><tr><td>只需布置好相应的场景，即可对测试结果进行分析反馈。</td><td>需要花费较大的时间成本</td></tr><tr><td>可以模拟复杂的测试场景完成1人工无法完成的测试。</td><td>产品的快速迭代</td></tr><tr><td>有助于创建持续集成环境</td><td>不能保证测试的有效性</td></tr></tbody></table>
+
+<h3 id="5-2-自动化测试常见技术"><a href="#5-2-自动化测试常见技术" class="headerlink" title="5.2 自动化测试常见技术"></a>5.2 自动化测试常见技术</h3><p><strong>1.录制与回放测试</strong></p>
+<pre><code>    录制过程中会生成对应的脚本，回放可以查看录制过程中存在的不足。
+</code></pre>
+<p><strong>2.脚本测试</strong></p>
+<pre><code>    脚本测试是测试计算机程序执行的指令集和。测试脚本主要有以下几种：
+
+    （1）线性脚本
+
+    （2）结构化脚本
+
+    （3）共享脚本
+</code></pre>
+<p><strong>3.数据驱动测试</strong></p>
+<pre><code>    指的是根据不同的测试场景设计不同的测试用例。主要包括：
+
+    （1）关键字驱动测试
+
+    （2）行为驱动测试
+</code></pre>
+<h3 id="5-3-自动化测试常用工具"><a href="#5-3-自动化测试常用工具" class="headerlink" title="5.3 自动化测试常用工具"></a>5.3 自动化测试常用工具</h3><p><strong>1.Selenium</strong></p>
+<pre><code>    当前针对Web系统的最受欢迎的开源免费的自动化工具。主要有以下特点：
+
+    （1）开源免费
+
+    （2）支持多平台
+
+    （3）支持多语言
+
+    （4）API使用简单，开发语言驱动灵活
+
+    （5）支持分布式测试用例执行
+</code></pre>
+<p>核心工具：</p>
+<pre><code>    （1）Selenium IDE（集成测试环境）
+
+    （2）Selenium Grid
+
+    （3）Selenium Romote Control
+</code></pre>
+<p><strong>2.Katalon Studio</strong></p>
+<p><strong>3.UFT</strong></p>
+<pre><code>    商业的软件自动化测试和回归测试工具。
+</code></pre>
+<h3 id="5-4-持续集成-测试"><a href="#5-4-持续集成-测试" class="headerlink" title="5.4 持续集成 测试"></a>5.4 持续集成 测试</h3><pre><code>    持续集成（CI）是软件开发（DevOps）中的一个概念，他强调的是软件开发和IT运维人员之间协作软件交付方式，以协作测试、打包和部署软件为核心，目的是增强软件版本的发布规律和可靠性。
+</code></pre>
+<h4 id="5-4-1-持续集成的概念"><a href="#5-4-1-持续集成的概念" class="headerlink" title="5.4.1 持续集成的概念"></a>5.4.1 持续集成的概念</h4><pre><code>    在持续集成中，开发人员会频繁的向主干提交代码，这些新提交的但首先经过编译和自动化测试验证，然后合并到主干。
+
+    CI是在源代码变更后自动检测、拉取、构建以及进行单元测试的过程。CI的好处是花费少量的时间即可完成自动化测试。
+</code></pre>
+<h4 id="5-4-2-持续集成测试框架设计"><a href="#5-4-2-持续集成测试框架设计" class="headerlink" title="5.4.2 持续集成测试框架设计"></a>5.4.2 持续集成测试框架设计</h4><pre><code>    **1.传统持续集成框架设计**
+
+    **2.持续集成容器化框架设计**
+</code></pre>
+<p>基于容器的持续集成平台在环境搭建上耗时少于传统的持续集成系统搭建，可以秒级启动一个镜像生成一个持续集成环境。容器占用资源少并且保证了开发环境和测试环境的统一，降低了测试重复率，极大地提高了测试效率。</p>
+<h3 id="5-5-自动化测试脚本"><a href="#5-5-自动化测试脚本" class="headerlink" title="5.5 自动化测试脚本"></a>5.5 自动化测试脚本</h3><h4 id="5-5-1-网页元素定位"><a href="#5-5-1-网页元素定位" class="headerlink" title="5.5.1 网页元素定位"></a>5.5.1 网页元素定位</h4><pre><code>    **1.使用class属性定位**
+
+    **2.使用id属性定位**
+
+    **3.使用xpath属性定位**
+
+    4.使用link text定位
+</code></pre>
+<h4 id="5-5-2-具体定位操作"><a href="#5-5-2-具体定位操作" class="headerlink" title="5.5.2 具体定位操作"></a>5.5.2 具体定位操作</h4><p><a target="_blank" rel="noopener" href="http://t.csdn.cn/VCOnv" title="http:&#x2F;&#x2F;t.csdn.cn&#x2F;VCOnv">http://t.csdn.cn/VCOnv<img src="https://i-blog.csdnimg.cn/blog_migrate/bb0dbab13f5f08eaeb7c15facac7a5b9.png"><a target="_blank" rel="noopener" href="http://t.csdn.cn/VCOnv">http://t.csdn.cn/VCOnv</a></a></p>
+<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><h3 id="习题1"><a href="#习题1" class="headerlink" title="习题1."></a>习题1.</h3><h3 id=""><a href="#" class="headerlink" title=""></a><img src="https://i-blog.csdnimg.cn/blog_migrate/fb65f2b1314671bb03414a0edd802fb8.png"></h3><p><img src="https://i-blog.csdnimg.cn/blog_migrate/00080bcbb10670b2f2c3f8b63eb693cc.png"></p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/adebd582c980d50f309cdb706226654a.png"></p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/eee1c230d425339267c781bc9ccc81b1.png"></p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/4e807cf4543c95bb6e278b4b6ea69351.png"></p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/ddf1e501d496db26610f1c364c1bed43.png"></p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/3379eafc8fd9bf51634922a106b357c5.png"></p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/4180812e8ef0e27623dfffa02164aa94.png"></p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/38bd387ab4913b6ac7de4aa5ae1eb0a6.png"></p>
+<p>四、简答题（30分）</p>
+<p><strong>1.试描述软件测试的定义（3分）</strong></p>
+<blockquote>
+<p>答：利用手工或者自动化的方式，按照测试方案对系统执行测试用例的过程叫做软件测试。</p>
+</blockquote>
+<p><strong>2.什么是软件缺陷（4分）</strong></p>
+<blockquote>
+<p>答：满足以下条件的问题都叫缺陷：</p>
+<p>软件未达到产品说明书中已标明的功能</p>
+<p>软件出现了产品说明书中指明不会出现的错误</p>
+<p>软件功能超出了产品说明书指明的范围</p>
+<p>软件未达到产品说明书虽未指出但应达到的目标</p>
+<p>软件测试员认为软件难以理解，不易使用，运行速度缓慢，或者最终用户认为该软件使用效果不好。</p>
+</blockquote>
+<p><strong>3.常见的黑盒测试用例的设计方法并分别简单介绍一下各自的思想。（8分）</strong></p>
+<blockquote>
+<p>答：等价类划分：等价类划分法是一种重要的、常用的黑盒测试方法，它将不能穷举的测试过程进行合理分类，从而保证设计出来的测试用例具有完整性和代表性。</p>
+<p>边界值分析：对输入输出的边界值进行测试的一种黑盒测试方法。</p>
+<p>决策表法：决策表是分析和表达多逻辑条件下执行不同操作的情况的工具</p>
+<p>因果图分析法：是一种利用图解法分析输入的各种组合情况，从而设计测试用例的方法，它适合于检查程序输入条件的各种组合情况。</p>
+<p>错误推测法：基于经验和直觉推测程序中所有可能存在的各种错误，从而有针对性的设计测试用例的方法。</p>
+</blockquote>
+<p><strong>4. 列举常见的系统测试方法。答出来5个即可。（5分）</strong></p>
+<blockquote>
+<p>答：恢复测试安全测试强度测试性能测试正确性测试可靠性测试兼容性测试Web测试</p>
+</blockquote>
+<p><strong>5.文档测试主要测试哪些内容答出来5点即可（5分）</strong></p>
+<blockquote>
+<p>答：（1）检查产品说明书属性（2）检查是否完整（3）检查是否准确（4）检查是否精确（5）检查是否一致（6）检查是否贴切（7）检查是否合理（8）检查代码无关（9）检查可测试性</p>
+</blockquote>
+<p><strong>6. 单元测试主要测试那几方面的问题（5分）</strong></p>
+<blockquote>
+<p>答：模块接口、局部数据结构、边界条件、独立的路径和错误处理。</p>
+</blockquote>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/58a3b0baf5bafdcdb9c80e1a083b3a31.png"></p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/42cc1bbd16c1aa4b6fe3ea6f47c21bee.png"></p>
+<h3 id="习题2"><a href="#习题2" class="headerlink" title="习题2."></a>习题2.</h3><p><strong>一、单项选择题：共20小题，每小题2 分，满分40分。</strong></p>
+<p><strong>1．软件测试的目的:（ c ）</strong></p>
+<blockquote>
+<p>A. 避免软件开发中出现的错误</p>
+<p>B. 发现软件开发中出现的错误</p>
+<p>C. 尽可能发现并排除软件中潜藏的错误，提高软件的可靠性</p>
+<p>D. 修改软件中出现的错误</p>
+</blockquote>
+<p><strong>2、软件测试是采用（ a ）执行软件的活动。</strong></p>
+<blockquote>
+<p>A．测试用例</p>
+<p>B．输入数据</p>
+<p>C．测试环境</p>
+<p>D．输入条件</p>
+</blockquote>
+<p>3、导致软件缺陷的最大原因是：（ a ）</p>
+<blockquote>
+<p>A．软件需求说明书</p>
+<p>B．设计方案</p>
+<p>C．编码</p>
+<p>D．维护</p>
+</blockquote>
+<p>4、在下列描述中，关于一个软件缺陷状态完整变化的错误描述是（ d ）</p>
+<blockquote>
+<p>A、打开——修复——关闭</p>
+<p>B、打开——关闭</p>
+<p>C、打开——保留</p>
+<p>D、激活——修复——重新打开</p>
+</blockquote>
+<p>5、在下列描述中，关于测试与调试的说法错误的是（ d ）</p>
+<blockquote>
+<p>A、测试是显示错误的行为；而调试是推理的过程；</p>
+<p>B、测试显示开发人员的错误。调试是开发人员为自己辩护；</p>
+<p>C、测试能预期和可控。调试需要想象、经验和思考；</p>
+<p>D、测试必须在详细设计已经完成的情况下才能开始；没有详细设计的信息调试不可能进行。</p>
+</blockquote>
+<p>6、某次程序调试没有出现预计的结果，下列（ b ）不可能是导致出错的原因。</p>
+<blockquote>
+<p>A．变量没有初始化 B．编写的语句书写格式不规范</p>
+<p>C．循环控制出错 D．代码输入有误</p>
+</blockquote>
+<p>7、软件缺陷修复的代价最高的阶段为（ a ）</p>
+<blockquote>
+<p>A、发布阶段</p>
+<p>B、需求阶段</p>
+<p>C、设计阶段</p>
+<p>D、编码阶段</p>
+</blockquote>
+<p>8、不属于逻辑覆盖方法的是（ d ）。</p>
+<blockquote>
+<p>A．组合覆盖 B．判定覆盖</p>
+<p>C．条件覆盖 D．接口覆盖</p>
+</blockquote>
+<p>9、（ d ）是选择若干个测试用例，运行被测程序，使得程序中的每个可执行语句至少执行一次。</p>
+<blockquote>
+<p>A、条件覆盖</p>
+<p>B、组合覆盖</p>
+<p>C、判定覆盖</p>
+<p>D、语句覆盖</p>
+</blockquote>
+<p>10、（ a ）是设计足够多的测试用例，使得程序中每个判定包含的每个条件的所有情况（真&#x2F;假）至少出现一次，并且每个判定本身的判定结果（真&#x2F;假）也至少出现一次。</p>
+<blockquote>
+<p>A、判定－条件覆盖</p>
+<p>B、组合覆盖</p>
+<p>C、判定覆盖</p>
+<p>D、条件覆盖</p>
+</blockquote>
+<p>11．软件测试是软件质量保证的重要手段，下述哪种测试是软件测试的最基础环节（ b ）</p>
+<blockquote>
+<p>A．功能测试</p>
+<p>B．单元测试</p>
+<p>C．结构测试</p>
+<p>D．验收测试</p>
+</blockquote>
+<p>12、单元测试的主要任务不包括（ b ）。</p>
+<blockquote>
+<p>A．出错处理 B．全局数据结构</p>
+<p>C．独立路径 D．模块接口</p>
+</blockquote>
+<p>13、如下图所示的N-S图，至少需要（ b ）个测试用例完成逻辑覆盖。</p>
+<blockquote>
+<p>A．12 B．48</p>
+<p>C．27 D．18</p>
+</blockquote>
+<p>14、单元测试中用来模拟实现被测模块需调用的其他功能模块的是（ b ）。</p>
+<blockquote>
+<p>A．驱动模块 B．桩模块</p>
+<p>C．主控模块 D．真实的被调用模块</p>
+</blockquote>
+<p>15、集成测试计划应该在（ b ）阶段末提交。</p>
+<blockquote>
+<p>A、需求分析</p>
+<p>B、概要设计</p>
+<p>C、详细设计</p>
+<p>D、单元测试完成</p>
+</blockquote>
+<p>16、下列关于程序效率的描述错误的是（ c ）。</p>
+<blockquote>
+<p>A．提高程序的执行速度可以提高程序的效率</p>
+<p>B．降低程序占用的存储空间可以提高程序的效率</p>
+<p>C．源程序的效率与详细设计阶段确定的算法的效率无关</p>
+<p>D．好的程序设计可以提高效率</p>
+</blockquote>
+<p>17、下列（ b ）是对程序流程图进行简化后得到的，它可以更加突出的表示程序控制流的结构，且不包含复合条件。</p>
+<blockquote>
+<p>A．DD-路径图 B．控制流图</p>
+<p>C．MM-路径图 D．模块调用图</p>
+</blockquote>
+<p>18、自底向上增量式集成测试中，下面（ c ）描述是正确的。</p>
+<blockquote>
+<p>A．测试由桩模块控制</p>
+<p>B．最上面的模块最先测试</p>
+<p>C．父单元用测试过的子单元测试</p>
+<p>D．包含树的深度优先或广度优先遍历过程</p>
+</blockquote>
+<p>19、测试后程序中残存的错误数目与该程序中已发现的错误数目成（ d ）。</p>
+<blockquote>
+<p>A．未知 B．反比</p>
+<p>C．相等 D．正比</p>
+</blockquote>
+<p>20、针对是否对无效数据进行测试，可以将等价类测试分为（b ）</p>
+<blockquote>
+<p>1)标准(一般)等价类测试</p>
+<p>2)健壮等价类测试</p>
+<p>3)弱等价类测试</p>
+<p>4)强等价类测试</p>
+<p>A．3）4） B．1）2）</p>
+<p>C．1）3） D．2）4）</p>
+</blockquote>
+<p><strong>二、判断题：共20小题，每题1分，满分20分）</strong></p>
+<p>1、一个程序中所含有的路径数与程序的复杂程度有着直接的关系。（∨）</p>
+<p>2、结构性测试是根据软件的规格说明来设计测试用例。（ x ）</p>
+<p>3、错误推测法是根据输出对输入的依赖关系来设计测试用例的。（x ）</p>
+<p>4、软件缺陷属性包括缺陷标识、缺陷类型、缺陷严重程度、缺陷产生可能性、缺陷优先级、缺陷状态、缺陷起源、缺陷来源、缺陷原因。（∨）</p>
+<p>5、对于一个含有n个变量的程序，采用边界值健壮性测试方法来测试程序会产生6n+1个测试用例。（∨）</p>
+<p>6、数据流测试是主要用作路径测试的真实性检查。两种形式分别为定义&#x2F;使用测试、基于程序片的测试。（∨）</p>
+<p>7、软件只要经过严格严谨的内部测试之后，可以做到没有缺陷。（x ）</p>
+<p>8、测试用例应由测试输入数据和对应的实际输出结果这两部分组成。（ x ）</p>
+<p>9、测试是可以穷尽的。（ x ）</p>
+<p>10、测试自动化是万能的。（ x ）</p>
+<p>11、软件缺陷可能会被修复，可能会被保留或者标识出来。（∨）</p>
+<p>12、每一个软件项目都有一个最优的测试量。（∨）</p>
+<p>13、黑盒测试往往会造成测试用例之间可能存在严重的冗余和未测试的功能漏洞。（∨）</p>
+<p>14、代码审查工作属于静态测试。（∨）</p>
+<p>15、软件测试是一个过程，包含若干活动，运行软件进行测试只是活动之一。（∨）</p>
+<p>16、回归测试是在软件修改后再次运行以前为查找错误而执行程序曾用过的测试用例. ∨</p>
+<p>17、集成测试是为确定软件系统是否满足验收标准以及使客户决定是否接受而进行的正式测试. （ x ）</p>
+<p>18、测试按照测试层次可以划分成为单元测试、集成测试和系统测试。（∨）</p>
+<p>19、只要能够达到100％的逻辑覆盖率，就可以保证程序的正确性。（ x ）</p>
+<p>20、永远有缺陷类型会在测试的一个层次上被发现，并且能够在另一个层次上逃避检测。（∨）</p>
+<p><strong>三、简答题：共4小题，每题5分，满分20分。</strong></p>
+<p><strong>1、优秀的软件测试工程师应具备哪些素质</strong></p>
+<blockquote>
+<p>答：具有探索精神、具有良好的计算机编程基础、故障排除能手、坚持不懈的精神、具有创新精神和超前意识、追求完美、判断准确、具有整体观念，对细节敏感、团队合作精神，沟通能力。</p>
+</blockquote>
+<p><strong>2、有二元函数f(x,y)，其中x∈[1,12]，y∈[1,31]；请写出该函数采用基本边界值分析法设计的测试用例。</strong></p>
+<blockquote>
+<p>答：{ &lt;1,15&gt;, &lt;2,15&gt;, &lt;11,15&gt;, &lt;12,15&gt;, &lt;6,15&gt;,</p>
+<p>&lt;6,1&gt;, &lt;6,2&gt;, &lt;6,30&gt;, &lt;6,31&gt; }</p>
+</blockquote>
+<h3 id="习题3"><a href="#习题3" class="headerlink" title="习题3."></a>习题3.</h3><p><strong>一、单项选择题：共20小题，每小题2 分，满分40分。</strong></p>
+<p>1．软件测试按照测试层次可以分为( c )</p>
+<blockquote>
+<p>A．黑盒测试、白盒测试</p>
+<p>B. 功能性测试和结构性测试</p>
+<p>C．单元测试、集成测试和系统测试</p>
+<p>D、动态测试和静态测试</p>
+</blockquote>
+<p>2、软件测试是采用（ a ）执行软件的活动。</p>
+<blockquote>
+<p>A．测试用例</p>
+<p>B．输入数据</p>
+<p>C．测试环境</p>
+<p>D．输入条件</p>
+</blockquote>
+<p>3．软件测试是软件开发过程的重要阶段，是软件质量保证的重要手段，下列哪个（些）是软件测试的任务？答案：（ d ）</p>
+<p>1预防软件发生错误 2发现程序错误 3提供诊断错误信息</p>
+<blockquote>
+<p>A．只有1</p>
+<p>B．只有2</p>
+<p>C．只有3</p>
+<p>D．都是</p>
+</blockquote>
+<p>4、导致软件缺陷的最大原因是：（ a ）</p>
+<blockquote>
+<p>A．软件需求说明书 B．设计方案</p>
+<p>C．编码 D．维护</p>
+</blockquote>
+<p>5、测试用例是为达到最佳的测试效果或高效的揭露隐藏的错误而精心设计的少量测试数据，至少应该包括（ a ）</p>
+<blockquote>
+<p>A、测试输入、执行条件和预期的结果。</p>
+<p>B、测试目标、测试工具</p>
+<p>C、测试环境</p>
+<p>D、测试配置</p>
+</blockquote>
+<p>6、对已经发现的错误进行错误定位和确定出错性质，并改正这些错误，同时修改相关的文档，这种行为属于（ b ）</p>
+<blockquote>
+<p>A．测试 B．调试</p>
+<p>C．回归测试 D．单元测试</p>
+</blockquote>
+<p>7、软件缺陷修复的代价最高的阶段为（ a ）</p>
+<blockquote>
+<p>A、发布阶段</p>
+<p>B、需求阶段</p>
+<p>C、设计阶段</p>
+<p>D、编码阶段</p>
+</blockquote>
+<p>8、下列（ b ）是关于软件缺陷的描述。</p>
+<blockquote>
+<p>A．导致软件包含故障的人的行为</p>
+<p>B．产品的异常情况</p>
+<p>C．引起一个功能部件不能完成所要求的功能的一种意外情况</p>
+<p>D．功能部件执行其规定功能的能力丧失</p>
+</blockquote>
+<p>9、可作为测试停止的标准是（ d ）</p>
+<blockquote>
+<p>A．当时间用光时</p>
+<p>B．执行了所有的测试用例，但没有发现故障</p>
+<p>C．当所有缺陷都已经清除时</p>
+<p>D．当达到所要求的覆盖时</p>
+</blockquote>
+<p>10、下列描述错误的是（ a ）</p>
+<blockquote>
+<p>A．软件发布后如果发现质量问题，那是软件测试人员的错</p>
+<p>B．穷尽测试实际上在一般情况下是不可行的</p>
+<p>C．软件测试自动化不是万能的</p>
+<p>D．测试能由非开发人员进行，调试必须由开发人员进行。</p>
+</blockquote>
+<p>11、如下图所示的N-S图，至少需要（ b ）个测试用例完成逻辑覆盖。</p>
+<blockquote>
+<p>A．15</p>
+<p>B．16</p>
+<p>C．17</p>
+<p>D．18</p>
+</blockquote>
+<p>12、下列（ c ）方法设计出的测试用例发现程序错误的能力最强。</p>
+<blockquote>
+<p>A．等价类划分法</p>
+<p>B．场景法</p>
+<p>C．边界值分析法</p>
+<p>D．决策表法</p>
+</blockquote>
+<p>13、功能性测试是根据（ a ）来设计测试用例。</p>
+<blockquote>
+<p>A、软件的规格说明</p>
+<p>B、设计文档</p>
+<p>C、程序的内部逻辑</p>
+<p>D、维护手册</p>
+</blockquote>
+<p>14、在软件修改之后，再次运行以前为发现错误而执行程序曾用过的测试用例，这种测试称之为（ c ）</p>
+<blockquote>
+<p>A．单元测试</p>
+<p>B．集成测试</p>
+<p>C．回归测试</p>
+<p>D．验收测试</p>
+</blockquote>
+<p>15、（ c ）方法是根据输出对输入的依赖关系来设计测试用例的。</p>
+<blockquote>
+<p>Ａ．边界值分析Ｂ．等价类</p>
+<p>Ｃ．因果图法Ｄ．错误推测法</p>
+</blockquote>
+<p>16、测试工程师的工作范围会包括检视代码、评审开发文档，这属于（ b ）</p>
+<blockquote>
+<p>A．动态测试 B．静态测试</p>
+<p>C．黑盒测试 D．白盒测试</p>
+</blockquote>
+<p>17、（ d ）是一种关注变量定义赋值点（语句）和引用或使用这些值的点（语句）的结构性测试，主要用作路径测试的真实性检查。</p>
+<blockquote>
+<p>A 、基本路径测试</p>
+<p>B 、逻辑覆盖</p>
+<p>C 、决策表</p>
+<p>D 、数据流测试</p>
+</blockquote>
+<p>二、判断题：共20小题，每题1分，满分20分）</p>
+<p>1. 软件测试是有风险的行为，并非所有的软件缺陷都能够被修复。（∨ ）</p>
+<p>2. 软件质量保证和软件测试是同一层次的概念。（x ）</p>
+<p>3. 我们有理由相信只要能够设计出尽可能好的测试方案，经过严格测试之后的软件可以没有缺陷。（ x ）</p>
+<p>4. 程序员兼任测试员可以提高工作效率。（ x ）</p>
+<p>5. 在设计测试用例时，应当包括合理的输入条件和不合理的输入条件。（ ∨ ）</p>
+<p>6. 传统测试是在开发的后期才介入，现在测试活动已经扩展到了整个生命周期。（ ∨ ）</p>
+<p>7. 传统测试以发现错误为目的，现在测试已经扩展到了错误预防的范畴。∨</p>
+<p>8. 软件测试的生命周期包括测试计划、测试设计、测试执行、缺陷跟踪、测试评估。（∨ ）</p>
+<p>9.调试从一个已知的条件开始，使用预先定义的过程，有预知的结果；测试从一个未知的条件开始，结束的过程不可预计。（ x ）</p>
+<p>10. 白盒测试往往会造成测试用例之间可能存在严重的冗余和未测试的功能漏洞。（ x ）</p>
+<p>11. 在边界值方法中，对于一个有n 个变量的函数作最坏情况测试，生成的测试用例个数是7n</p>
+<p>个。（ x ）</p>
+<p>12. 软件生存周期是从软件开始开发到开发结束的整个时期。 （ x ）</p>
+<p>13. 在所有的黑盒测试方法中，基于决策表的测试是最为严格、最具有逻辑性的测试方法。（ ∨ ） 14. 永远有缺陷类型会在测试的一个层次上被发现，并且能够在另一个层次上逃避检测。（∨ ） 15. 测试用例的数目越多，测试的效果越好。（ x ）</p>
+<p>16. 只要能够达到100％的逻辑覆盖率，就可以保证程序的正确性。（ x ）</p>
+<p>17. 单元测试属于动态测试。（ ∨ ）</p>
+<p>18. 验收测试是以最终用户为主的测试。（∨ ）</p>
+<p>19. 没有发现错误的测试是没有价值的。（ ∨ ）</p>
+<p>20. 可以把不合格的开发人员安排做测试。（ x ）</p>
+<h3 id="其他习题："><a href="#其他习题：" class="headerlink" title="其他习题："></a>其他习题：</h3><p><strong>1.什么是软件测试？</strong></p>
+<blockquote>
+<p>答：软件测试是人工的或通过使用工具来自动的运行被测软件系统，或静态检查被测软件系统的过程，目的在于检验被测系统是否满足需求，或要弄清楚实际的系统输出与预期的系统输出之间的差异。</p>
+</blockquote>
+<p><strong>2.请简述常用的性能测试指标。</strong></p>
+<blockquote>
+<p>答：响应时间、吞吐量、并发用户数、每秒钟处理的事务数和交易的数量、点击率、资源利用率。</p>
+</blockquote>
+<p>3.在软件生命周期的哪一个阶段,软件缺陷修复费用最低(A)</p>
+<ul>
+<li>*A、*需求分析(编制产品说明书)</li>
+<li>*B、*设计</li>
+<li>*C、*编码</li>
+<li>*D、*产品发布</li>
+</ul>
+<p>4.必须要求用户参与的测试阶段是(D)</p>
+<ul>
+<li>*A、*单元测试</li>
+<li>*B、*集成测试</li>
+<li>*C、*确认测试</li>
+<li>*D、*验收测试</li>
+</ul>
+<p>5.在边界值分析中,下列数据通常不用来做数据测试的是(B)。</p>
+<ul>
+<li>*A、*正好等于边界的值</li>
+<li>*B、*等价类中的等价值</li>
+<li>*C、*刚刚大于边界的值</li>
+<li>*D、*刚刚小于边界的值</li>
+</ul>
+<p>6.软件调试的目的是(A)。</p>
+<ul>
+<li>*A、*找出错误所在并改正之</li>
+<li>*B、*排除存在错误的可能性</li>
+<li>*C、*对错误性质进行分类</li>
+<li>*D、*统计出错的次数</li>
+</ul>
+<p>7.划分软件测试属于白盒测试还是黑盒测试的依据是(C)</p>
+<ul>
+<li>*A、*是否执行程序代码</li>
+<li>*B、*是否能看到软件设计文档</li>
+<li>*C、*是否能看到被测源程序</li>
+<li>*D、*运行结果是否确定</li>
+</ul>
+<p>8.请按照以下题意，使用等价类划分法设计测试用例。</p>
+<p>某城市电话号码由三部分组成，分别是：</p>
+<p>   地区码—— 空白或三位数字；</p>
+<p>   前    缀—— 非‘0’或‘1’开头的三位数字；</p>
+<p>   后    缀—— 4位数字。</p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/06e1673728ff31438948b108583a1609.png"></p>
+<p>9. 有二元函数f（x，y），其中x∈[1,12]，y∈[1,31]，采用边界值分析法设计测试用例。</p>
+<p>答：{&lt;1,15&gt;,&lt;2,15&gt;,&lt;11,15&gt;,&lt;12,15&gt;,&lt;6,15&gt;,&lt;6,1&gt;,&lt;6,2&gt;,&lt;6,30&gt;,&lt;6,31&gt;}</p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/3a670c6464fda3699a4d0fdc991fa386.png"></p>
+<p>10.某软件的一个模块的需求规格说明书中描述：</p>
+<p>（1）年薪制员工：严重过失，扣年终风险金的4%；过失，扣年终风险金的2%。</p>
+<p>（2）非年薪制员工：严重过失，扣当月薪资的8%；过失，扣当月薪资的4%。</p>
+<p>请绘制出因果图和判定表，并给出相应的测试用例。</p>
+<p>答：分析因果图的原因和结果。</p>
+<p>  原因为：</p>
+<pre><code>    C1:年薪制员工
+
+    C2:过失
+
+    C3:严重过失
+</code></pre>
+<p>结果为：</p>
+<pre><code>    E1:扣年终风险金的2%
+
+    E2:扣年终风险金的4%
+
+    E3:扣当月薪资的4%
+
+    E4:扣当月薪资的8%
+</code></pre>
+<p>其中C2,C3之间E约束。</p>
+<pre><code>    因果图为：
+</code></pre>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/e4257aa8df82ef8fa177a4ded1e80bb0.png"></p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/17646d369f243e0653653eff717b4f3a.png"></p>
+<p> 11.LoadRunner是(A)</p>
+<ul>
+<li>*A、*工业标准级负载测试工具</li>
+<li>*B、*一款下载软件</li>
+<li>*C、*单元测试框架</li>
+<li>*D、*集成开发工具</li>
+</ul>
+<p>12.下列常用的测试用例设计技术中,不属于白盒测试技术的是(D)。</p>
+<ul>
+<li>*A、*信息流分析法</li>
+<li>*B、*数据流分析法</li>
+<li>*C、*逻辑覆盖测试和基本路径测试</li>
+<li>*D、*状态图法</li>
+</ul>
+<p>13.下列叙述中,哪一项是正确的(D)。</p>
+<ul>
+<li>*A、*用黑盒法测试时,测试用例是根据程序内部逻辑设计的;</li>
+<li>*B、*测试是为了验证该软件已正确地实现了用户的要求;</li>
+<li>*C、*对面向对象程序来说,单元测试的最小单元是每条程序语句,即以分号结尾的程序;</li>
+<li>*D、*发现错误多的程序模块,残留在模块中的错误也多。</li>
+</ul>
+<p>14.以下对单元测试,不正确的说法是(C)。</p>
+<ul>
+<li>*A、*单元测试的主要目的是针对编码过程中可能存在的各种错误</li>
+<li>*B、*单元测试一般是由程序开发人员完成的</li>
+<li>*C、*单元测试是一种不需要关注程序结构的测试</li>
+<li>*D、*单元测试属于白盒测试的一种</li>
+</ul>
+<p>15.在白盒测试技术中,有语句覆盖、条件覆盖、判定覆盖(也称分支覆盖)、路径覆盖等,其中(D)是最强的覆盖准则。</p>
+<ul>
+<li>*A、*语句覆盖</li>
+<li>*B、*条件覆盖</li>
+<li>*C、*判定覆盖</li>
+<li>*D、*路径覆盖</li>
+</ul>
+<p>16.发现错误能力最弱的是(A)。</p>
+<ul>
+<li>*A、*语句覆盖</li>
+<li>*B、*判定覆盖</li>
+<li>*C、*条件覆盖</li>
+<li>*D、*路径覆盖</li>
+</ul>
+<p>17.下列哪一项不是白盒测试?(C)</p>
+<ul>
+<li>*A、*单元测试</li>
+<li>*B、*集成测试</li>
+<li>*C、*系统测试</li>
+<li>*D、*回归测试</li>
+</ul>
+<p>18.白盒测试与黑盒测试的最主要区别,正确的是___________。(A)</p>
+<ul>
+<li>*A、*白盒测试侧重于程序结构,黑盒测试侧重于功能</li>
+<li>*B、*白盒测试可以使用测试工具,黑盒测试不能使用工具</li>
+<li>*C、*白盒测试需要程序参与,黑盒测试不需要</li>
+<li>*D、*黑盒测试比白盒测试应用更广泛</li>
+</ul>
+<p>19.在系统测试中,测试人员主要根据( A)设计测试用例</p>
+<ul>
+<li>*A、*需求分析说明书</li>
+<li>*B、*概要设计说明书</li>
+<li>*C、*详细设计说明书</li>
+<li>*D、*系统规格说明书</li>
+</ul>
+<p>20.不属于白盒测试的技术是 (C ) 。</p>
+<ul>
+<li>*A、*语句覆盖</li>
+<li>*B、*判定覆盖</li>
+<li>*C、*边界值分析</li>
+<li>*D、*基本路径测试</li>
+</ul>
+<p>21.<strong>针对下面一段代码，设计其逻辑覆盖测试用例。（要求：画程序流程图）</strong></p>
+<p>Main（）</p>
+<p>{</p>
+<p>Int a,b;</p>
+<p>Float c;</p>
+<p>Scanf(“%d,%d,%f”,&amp;a,&amp;b,&amp;c);</p>
+<p>If (a&gt;18 and b&#x3D;5)</p>
+<p>{</p>
+<p>  C&#x3D;a&#x2F;b;</p>
+<p>}</p>
+<p>If(a&#x3D;20 and c&gt;2)</p>
+<p>{</p>
+<p>C&#x3D;c+6;</p>
+<p>}</p>
+<p>Printf(“c&#x3D;%f”,c);</p>
+<p>}</p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/a7b8a6d8d1ec8942ee00e801f59c5dc1.png"></p>
+<p> 22.有一个程序图如下，请给出环形复杂度和基本测试路径。</p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/889530b0804250bc538ce22a9397eb94.png"></p>
+<p>答：</p>
+<pre><code>    1.v（G）=4
+
+    2. （1）5→7，8→16→17→19→21→5→22
+
+        （2）5→7，8→16→18→19→21→5→22
+
+        （3）5→7，8→11，12→21→5→22
+
+        （4）5→22
+</code></pre>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://xyu1230.github.io/blog">XYu1230</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://xyu1230.github.io/blog/2026/05/10/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/">https://xyu1230.github.io/blog/2026/05/10/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://xyu1230.github.io/blog" target="_blank">XYu1230的技术博客</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/XYu1230/blog@master/source/images/avatar.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/blog/2026/03/11/LangChain%E6%99%BA%E8%83%BD%E4%BD%93%E5%AD%A6%E4%B9%A0/" title="LangChain智能体学习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">LangChain智能体学习</div></div><div class="info-2"><div class="info-item-1">LangChain 主要功能  RAG  RAG工作原理    工作流程    LangChain RAG开发12345678910# 调用阿里模型from langchain_community.llms.tongyi import Tongyimodel = Tongyi(model=&quot;qwen-max&quot;, api_key=&#x27;sk-xxx&#x27;)res = model.invoke(input=&quot;what is your name?&quot;)print(res)    1234567891011# 调用本地ollama模型from langchain_community.llms.ollama import Ollamamodel = Ollama(model=&quot;deepseek-r1:7b&quot;)res = model.invoke(input=&quot;what is your name?&quot;)print(res)# 流式输出res = model.stream(input=&quot;你是谁?&...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/XYu1230/blog@master/source/images/avatar.jpg" onerror="this.onerror=null;this.src='/blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">XYu1230</div><div class="author-info-description">热爱技术 | 持续学习</div><div class="site-data"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/XYu1230"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/XYu1230" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xyu1230@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客，这里记录了我的技术成长之路。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">1、软件测试基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E8%BD%AF%E4%BB%B6-%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1.1软件 概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-1%E8%BD%AF%E4%BB%B6%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1.1软件的生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-2-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.1.2 软件开发模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-3-%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.1.3 软件质量概述</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E8%BD%AF%E4%BB%B6%E7%BC%BA%E9%99%B7%E7%AE%A1%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 软件缺陷管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-1-%E8%BD%AF%E4%BB%B6%E7%BC%BA%E9%99%B7%E4%BA%A7%E7%94%9F%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.2.1 软件缺陷产生的原因</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-2-%E8%BD%AF%E4%BB%B6%E7%BC%BA%E9%99%B7%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2.2 软件缺陷的分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-3-%E8%BD%AF%E4%BB%B6%E7%BC%BA%E9%99%B7%E7%9A%84%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B"><span class="toc-number">1.2.3.</span> <span class="toc-text">1.2.3 软件缺陷的处理流程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 软件测试概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-1-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%AE%80%E4%BB%8B"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 软件测试简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-2-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%9A%84%E7%9B%AE%E7%9A%84"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 软件测试的目的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-3-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">1.3.3.</span> <span class="toc-text">1.3.3 软件测试的分类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 软件测试与软件开发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-1%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.4.1软件测试与软件开发的关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-2-%E5%B8%B8%E8%A7%81%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.4.2.</span> <span class="toc-text">1.4.2 常见的软件测试模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%9A%84%E5%8E%9F%E5%88%99"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 软件测试的原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B"><span class="toc-number">1.6.</span> <span class="toc-text">1.6 软件测试的基本流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">2. 黑盒测试方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%AD%89%E4%BB%B7%E7%B1%BB%E5%88%92%E5%88%86%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 等价类划分法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-%E7%AD%89%E4%BB%B7%E7%B1%BB%E5%88%92%E5%88%86%E6%B3%95%E6%A6%82%E8%BF%B0"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1 等价类划分法概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-%E4%B8%89%E8%A7%92%E5%BD%A2%E9%97%AE%E9%A2%98%E7%9A%84%E7%AD%89%E4%BB%B7%E7%B1%BB%E5%88%92%E5%88%86"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.1.2  三角形问题的等价类划分</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%BE%B9%E7%95%8C-%E5%80%BC%E5%88%86%E6%9E%90%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 边界 值分析法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-%E8%BE%B9%E7%95%8C%E5%80%BC%E5%88%86%E6%9E%90%E6%B3%95%E6%A6%82%E8%BF%B0"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1 边界值分析法概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-%E4%B8%89%E8%A7%92%E5%BD%A2%E9%97%AE%E9%A2%98%E8%BE%B9%E7%95%8C%E5%80%BC%E5%88%86%E6%9E%90"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2 三角形问题边界值分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%9B%A0%E6%9E%9C%E5%9B%BE%E4%B8%8E%E5%86%B3%E7%AD%96%E8%A1%A8%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 因果图与决策表法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-%E5%9B%A0%E6%9E%9C%E5%9B%BE%E8%AE%BE%E8%AE%A1%E6%B3%95"><span class="toc-number">2.3.1.</span> <span class="toc-text">2.3.1 因果图设计法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-%E5%86%B3%E7%AD%96%E8%A1%A8%EF%BC%88%E5%88%A4%E5%AE%9A%E8%A1%A8%EF%BC%89"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.3.2 决策表（判定表）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-3-%E4%B8%89%E8%A7%92%E5%BD%A2%E5%86%B3%E7%AD%96%E8%A1%A8"><span class="toc-number">2.3.3.</span> <span class="toc-text">2.3.3 三角形决策表</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E6%AD%A3%E4%BA%A4%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1%E6%B3%95"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 正交实验设计法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95"><span class="toc-number">3.</span> <span class="toc-text">3. 白盒测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E9%80%BB%E8%BE%91%E8%A6%86%E7%9B%96%E6%B3%95"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 逻辑覆盖法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-1-%E8%AF%AD%E5%8F%A5%E8%A6%86%E7%9B%96"><span class="toc-number">3.1.1.</span> <span class="toc-text">3.1.1 语句覆盖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-2-%E5%88%A4%E5%AE%9A%E8%A6%86%E7%9B%96"><span class="toc-number">3.1.2.</span> <span class="toc-text">3.1.2 判定覆盖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-3-%E6%9D%A1%E4%BB%B6%E8%A6%86%E7%9B%96"><span class="toc-number">3.1.3.</span> <span class="toc-text">3.1.3 条件覆盖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-4-%E5%88%A4%E5%AE%9A-%E6%9D%A1%E4%BB%B6%E8%A6%86%E7%9B%96"><span class="toc-number">3.1.4.</span> <span class="toc-text">3.1.4 判定-条件覆盖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-5-%E6%9D%A1%E4%BB%B6%E7%BB%84%E5%90%88%E8%A6%86%E7%9B%96"><span class="toc-number">3.1.5.</span> <span class="toc-text">3.1.5 条件组合覆盖</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E7%A8%8B%E5%BA%8F%E6%8F%92%E6%A1%A9%E6%B3%95"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 程序插桩法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-1-%E7%9B%AE%E6%A0%87%E4%BB%A3%E7%A0%81%E6%8F%92%E6%A1%A9"><span class="toc-number">3.2.1.</span> <span class="toc-text">3.2.1 目标代码插桩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-2-%E6%BA%90%E4%BB%A3%E7%A0%81%E6%8F%92%E6%A1%A9"><span class="toc-number">3.2.2.</span> <span class="toc-text">3.2.2 源代码插桩</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="toc-number">4.</span> <span class="toc-text">4. 性能测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 性能测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%9A%84%E6%8C%87%E6%A0%87"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 性能测试的指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 性能测试的种类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 性能测试流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 性能测试工具</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-1-LoadRunner"><span class="toc-number">4.5.1.</span> <span class="toc-text">4.5.1 LoadRunner</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-2-JMeter"><span class="toc-number">4.5.2.</span> <span class="toc-text">4.5.2 JMeter</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95"><span class="toc-number">5.</span> <span class="toc-text">5. 自动化测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%A6%82%E8%BF%B0"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 自动化概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-1-%E4%BB%80%E4%B9%88%E6%98%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E6%A6%82%E8%BF%B0"><span class="toc-number">5.1.1.</span> <span class="toc-text">5.1.1 什么是自动化概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-2-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B"><span class="toc-number">5.1.2.</span> <span class="toc-text">5.1.2 自动化测试的基本流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-3-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%AE%9E%E6%96%BD%E7%AD%96%E7%95%A5"><span class="toc-number">5.1.3.</span> <span class="toc-text">5.1.3 自动化测试实施策略</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-4-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E7%9A%84%E4%BC%98%E5%8A%BF%E5%92%8C%E5%8A%A3%E5%8A%BF"><span class="toc-number">5.1.4.</span> <span class="toc-text">5.1.4 自动化测试的优势和劣势</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%B8%B8%E8%A7%81%E6%8A%80%E6%9C%AF"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 自动化测试常见技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 自动化测试常用工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90-%E6%B5%8B%E8%AF%95"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 持续集成 测试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-4-1-%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">5.4.1.</span> <span class="toc-text">5.4.1 持续集成的概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-4-2-%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1"><span class="toc-number">5.4.2.</span> <span class="toc-text">5.4.2 持续集成测试框架设计</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 自动化测试脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5-1-%E7%BD%91%E9%A1%B5%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D"><span class="toc-number">5.5.1.</span> <span class="toc-text">5.5.1 网页元素定位</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5-2-%E5%85%B7%E4%BD%93%E5%AE%9A%E4%BD%8D%E6%93%8D%E4%BD%9C"><span class="toc-number">5.5.2.</span> <span class="toc-text">5.5.2 具体定位操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">习题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%981"><span class="toc-number">6.1.</span> <span class="toc-text">习题1.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">6.2.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%982"><span class="toc-number">6.3.</span> <span class="toc-text">习题2.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E9%A2%983"><span class="toc-number">6.4.</span> <span class="toc-text">习题3.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E4%B9%A0%E9%A2%98%EF%BC%9A"><span class="toc-number">6.5.</span> <span class="toc-text">其他习题：</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/blog/2026/05/10/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/" title="软件测试期末复习知识点整理">软件测试期末复习知识点整理</a><time datetime="2026-05-10T09:05:35.000Z" title="发表于 2026-05-10 17:05:35">2026-05-10</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/blog/2026/03/11/LangChain%E6%99%BA%E8%83%BD%E4%BD%93%E5%AD%A6%E4%B9%A0/" title="LangChain智能体学习">LangChain智能体学习</a><time datetime="2026-03-11T01:07:13.000Z" title="发表于 2026-03-11 09:07:13">2026-03-11</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/blog/2026/01/24/%E8%87%AA%E6%B3%A8%E6%84%8F%E6%9C%BA%E5%88%B6%E5%92%8CTransformer%E6%9E%B6%E6%9E%84/" title="自注意机制和Transformer架构">自注意机制和Transformer架构</a><time datetime="2026-01-24T08:27:39.000Z" title="发表于 2026-01-24 16:27:39">2026-01-24</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/blog/2026/01/22/android-studio%E8%BF%9E%E6%8E%A5mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/" title="android studio连接mumu模拟器">android studio连接mumu模拟器</a><time datetime="2026-01-22T04:25:30.000Z" title="发表于 2026-01-22 12:25:30">2026-01-22</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/blog/2026/01/18/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E6%8D%A2C/" title="PTA表达式转换-C++">PTA表达式转换-C++</a><time datetime="2026-01-18T15:37:14.000Z" title="发表于 2026-01-18 23:37:14">2026-01-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"></div><div class="footer_custom_text">Copyright © 2026 XYu1230. All Rights Reserved.<br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://butterfly.js.org" target="_blank">Butterfly</a></div><div class="footer-runtime"><span id="runtime_show"></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/blog/js/utils.js?v=5.5.4-b1"></script><script src="/blog/js/main.js?v=5.5.4-b1"></script><div class="js-pjax"></div><script> (function() { function updateRuntime() { const startDate = new Date('2026/01/17 00:00:00'); const currentDate = new Date(); const diff = currentDate - startDate; const days = Math.floor(diff / (1000 * 60 * 60 * 24)); const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)); const seconds = Math.floor((diff % (1000 * 60)) / 1000); const runtime = document.getElementById('runtime_show'); if (runtime) { runtime.innerHTML = '本站已运行 ' + days + ' 天 ' + hours + ' 小时 ' + minutes + ' 分钟 ' + seconds + ' 秒'; } } updateRuntime(); setInterval(updateRuntime, 1000); })(); </script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
