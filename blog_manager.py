@@ -467,6 +467,7 @@ def deploy_blog():
     steps = [
         ("清理旧文件", "npx hexo clean"),
         ("生成静态文件", "npx hexo generate"),
+        ("拉取远程最新代码", "git pull --rebase --autostash origin master"),
         ("暂存所有变更", "git add ."),
         ("提交代码", f'git commit -m "update: 博客更新 {today}"'),
         ("推送到GitHub", "git push origin master"),
