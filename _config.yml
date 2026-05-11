@@ -100,8 +100,4 @@ ignore:
 theme: hexo-theme-butterfly
 
 # Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: https://github.com/XYu1230/blog.git
-  branch: gh-pages
+## Cloudflare Pages 自动构建部署 (GitHub 集成)
