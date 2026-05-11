@@ -451,33 +451,44 @@ def deploy_blog():
     download_all_external_images()
     normalize_all_posts_images()
     
-    confirm = select_menu("确认部署到GitHub Pages？", ["确认部署", "取消"], show_back=False)
-    
+    confirm = select_menu("确认推送到GitHub触发部署？", ["确认部署", "取消"], show_back=False)
+
     if confirm != 0:
         return
-    
+
     clear_screen()
     print("=" * 50)
     print("  正在部署...")
     print("=" * 50)
-    
+
+    from datetime import date
+    today = date.today().isoformat()
+
     steps = [
         ("清理旧文件", "npx hexo clean"),
         ("生成静态文件", "npx hexo generate"),
-        ("部署到GitHub", "npx hexo deploy"),
+        ("暂存所有变更", "git add ."),
+        ("提交代码", f'git commit -m "update: 博客更新 {today}"'),
+        ("推送到GitHub", "git push origin master"),
     ]
-    
+
     for i, (name, cmd) in enumerate(steps, 1):
         print(f"\n[{i}/{len(steps)}] {name}...")
-        success, _ = run_command(cmd)
+        success, output = run_command(cmd)
         if not success:
+            # git commit 没东西可提交不算失败
+            if "nothing to commit" in output or "nothing added" in output:
+                print("  无需提交，继续推送...")
+                continue
             print(f"\n{name}失败！")
             input("\n按回车键继续...")
             return
-    
+
     print("\n" + "=" * 50)
     print("  部署成功！")
-    print("  https://xyu1230.github.io/blog")
+    print("  https://blog.xyu1.asia")
+    print("=" * 50)
+    print("  Cloudflare Pages 将在几分钟内自动构建部署")
     print("=" * 50)
     input("\n按回车键继续...")
 
