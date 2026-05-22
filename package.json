@@ -26,6 +26,6 @@
     "hexo-theme-landscape": "^1.0.0"
   },
   "devDependencies": {
-    "wrangler": "^4.90.0"
+    "wrangler": "^4.94.0"
   }
 }
