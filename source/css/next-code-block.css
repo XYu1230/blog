@@ -1,0 +1,246 @@
+/* NexT-like code blocks for Butterfly. */
+*::selection {
+  background: #262a30 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+*::-moz-selection {
+  background: #262a30 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+#article-container {
+  font-size: 16px;
+  line-height: 2;
+}
+
+#article-container figure.highlight,
+#article-container code {
+  font-size: 0.875em;
+}
+
+#article-container figure.highlight {
+  margin: 1.5rem 0;
+  border: 1px solid #e6e8eb;
+  border-radius: 6px;
+  background: #f7f7f7 !important;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+#article-container figure.highlight .highlight-tools {
+  height: 2.15rem;
+  border-bottom: 1px solid #e6e8eb;
+  background: #f3f4f5 !important;
+  color: #555;
+  line-height: 2.15rem;
+}
+
+#article-container figure.highlight .highlight-tools .code-lang {
+  color: #555;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+#article-container figure.highlight .highlight-tools .copy-button,
+#article-container figure.highlight .highlight-tools .expand {
+  color: #777;
+  transition: color 0.2s ease;
+}
+
+#article-container figure.highlight .highlight-tools .copy-button:hover,
+#article-container figure.highlight .highlight-tools .expand:hover {
+  color: #222;
+}
+
+#article-container figure.highlight table,
+#article-container figure.highlight pre,
+#article-container figure.highlight .code pre,
+#article-container figure.highlight .gutter pre {
+  background: #f7f7f7 !important;
+}
+
+#article-container figure.highlight pre {
+  padding: 0.85rem 0;
+  line-height: 1.65;
+}
+
+#article-container figure.highlight .gutter {
+  border-right: 1px solid #e6e8eb;
+}
+
+#article-container figure.highlight .gutter pre {
+  padding-right: 0.75rem;
+  color: #b5b5b5 !important;
+}
+
+#article-container figure.highlight .code pre {
+  padding-left: 0.9rem;
+}
+
+#article-container figure.highlight .line {
+  min-height: 1.65em;
+}
+
+#article-container figure.highlight .code pre,
+#article-container figure.highlight .line {
+  color: #4d4d4c !important;
+}
+
+#article-container figure.highlight .comment,
+#article-container figure.highlight .quote {
+  color: #8e908c !important;
+}
+
+#article-container figure.highlight .keyword,
+#article-container figure.highlight .selector-tag,
+#article-container figure.highlight .subst {
+  color: #8959a8 !important;
+}
+
+#article-container figure.highlight .string,
+#article-container figure.highlight .doctag,
+#article-container figure.highlight .regexp {
+  color: #718c00 !important;
+}
+
+#article-container figure.highlight .number,
+#article-container figure.highlight .literal,
+#article-container figure.highlight .variable,
+#article-container figure.highlight .template-variable {
+  color: #f5871f !important;
+}
+
+#article-container figure.highlight .built_in,
+#article-container figure.highlight .builtin-name,
+#article-container figure.highlight .type,
+#article-container figure.highlight .class .title {
+  color: #4271ae !important;
+}
+
+#article-container figure.highlight .title,
+#article-container figure.highlight .function,
+#article-container figure.highlight .section,
+#article-container figure.highlight .selector-id {
+  color: #c82829 !important;
+}
+
+#article-container figure.highlight .attribute,
+#article-container figure.highlight .attr,
+#article-container figure.highlight .name,
+#article-container figure.highlight .tag {
+  color: #eab700 !important;
+}
+
+#article-container figure.highlight .symbol,
+#article-container figure.highlight .bullet,
+#article-container figure.highlight .link {
+  color: #3e999f !important;
+}
+
+#article-container code {
+  border-radius: 4px;
+  background: rgba(27, 31, 35, 0.05);
+  color: #c7254e;
+}
+
+[data-theme='dark'] #article-container figure.highlight {
+  border-color: #343944;
+  background: #1f222b !important;
+}
+
+[data-theme='dark'] #article-container figure.highlight .highlight-tools {
+  border-bottom-color: #343944;
+  background: #242832 !important;
+  color: #c9d1d9;
+}
+
+[data-theme='dark'] #article-container figure.highlight .highlight-tools .code-lang,
+[data-theme='dark'] #article-container figure.highlight .highlight-tools .copy-button,
+[data-theme='dark'] #article-container figure.highlight .highlight-tools .expand {
+  color: #c9d1d9;
+}
+
+[data-theme='dark'] #article-container figure.highlight .highlight-tools .copy-button:hover,
+[data-theme='dark'] #article-container figure.highlight .highlight-tools .expand:hover {
+  color: #fff;
+}
+
+[data-theme='dark'] #article-container figure.highlight table,
+[data-theme='dark'] #article-container figure.highlight pre,
+[data-theme='dark'] #article-container figure.highlight .code pre,
+[data-theme='dark'] #article-container figure.highlight .gutter pre {
+  background: #1f222b !important;
+}
+
+[data-theme='dark'] #article-container figure.highlight .gutter {
+  border-right-color: #343944;
+}
+
+[data-theme='dark'] #article-container figure.highlight .gutter pre {
+  color: #6e7681 !important;
+}
+
+[data-theme='dark'] #article-container figure.highlight .code pre,
+[data-theme='dark'] #article-container figure.highlight .line {
+  color: #c9d1d9 !important;
+}
+
+[data-theme='dark'] #article-container figure.highlight .comment,
+[data-theme='dark'] #article-container figure.highlight .quote {
+  color: #8b949e !important;
+}
+
+[data-theme='dark'] #article-container figure.highlight .keyword,
+[data-theme='dark'] #article-container figure.highlight .selector-tag,
+[data-theme='dark'] #article-container figure.highlight .subst {
+  color: #ff7b72 !important;
+}
+
+[data-theme='dark'] #article-container figure.highlight .string,
+[data-theme='dark'] #article-container figure.highlight .doctag,
+[data-theme='dark'] #article-container figure.highlight .regexp {
+  color: #a5d6ff !important;
+}
+
+[data-theme='dark'] #article-container figure.highlight .number,
+[data-theme='dark'] #article-container figure.highlight .literal,
+[data-theme='dark'] #article-container figure.highlight .variable,
+[data-theme='dark'] #article-container figure.highlight .template-variable {
+  color: #79c0ff !important;
+}
+
+[data-theme='dark'] #article-container figure.highlight .built_in,
+[data-theme='dark'] #article-container figure.highlight .builtin-name,
+[data-theme='dark'] #article-container figure.highlight .type,
+[data-theme='dark'] #article-container figure.highlight .class .title {
+  color: #d2a8ff !important;
+}
+
+[data-theme='dark'] #article-container figure.highlight .title,
+[data-theme='dark'] #article-container figure.highlight .function,
+[data-theme='dark'] #article-container figure.highlight .section,
+[data-theme='dark'] #article-container figure.highlight .selector-id {
+  color: #ffa657 !important;
+}
+
+[data-theme='dark'] #article-container figure.highlight .attribute,
+[data-theme='dark'] #article-container figure.highlight .attr,
+[data-theme='dark'] #article-container figure.highlight .name,
+[data-theme='dark'] #article-container figure.highlight .tag {
+  color: #7ee787 !important;
+}
+
+[data-theme='dark'] #article-container figure.highlight .symbol,
+[data-theme='dark'] #article-container figure.highlight .bullet,
+[data-theme='dark'] #article-container figure.highlight .link {
+  color: #a5d6ff !important;
+}
+
+[data-theme='dark'] #article-container code {
+  background: rgba(240, 246, 252, 0.12);
+  color: #ff7b72;
+}
