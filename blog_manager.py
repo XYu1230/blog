@@ -8,6 +8,7 @@ import subprocess
 import re
 import hashlib
 import shutil
+import json
 import urllib.request
 import urllib.error
 import time
@@ -162,6 +163,28 @@ def _file_hash(filepath):
     return hash_md5.hexdigest()
 
 
+def _load_cache():
+    """加载图片处理缓存"""
+    cache_path = os.path.join(BLOG_DIR, ".image_cache.json")
+    if os.path.exists(cache_path):
+        try:
+            with open(cache_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {}
+
+
+def _save_cache(cache):
+    """保存图片处理缓存"""
+    cache_path = os.path.join(BLOG_DIR, ".image_cache.json")
+    try:
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False)
+    except Exception:
+        pass
+
+
 def normalize_images_in_post(md_path):
     try:
         with open(md_path, "r", encoding="utf-8") as f:
@@ -235,20 +258,31 @@ def normalize_images_in_post(md_path):
 def normalize_all_posts_images():
     if not os.path.exists(POSTS_DIR):
         return 0, 0
-    
+
+    cache = _load_cache()
     updated_posts = 0
     total_copied = 0
-    
+
     for f in os.listdir(POSTS_DIR):
         if f.endswith(".md"):
-            changed, copied = normalize_images_in_post(os.path.join(POSTS_DIR, f))
+            md_path = os.path.join(POSTS_DIR, f)
+            mtime = os.path.getmtime(md_path)
+            size = os.path.getsize(md_path)
+            key = f + ":normalize"
+            cached = cache.get(key)
+            if cached and cached["mtime"] == mtime and cached["size"] == size:
+                continue
+            changed, copied = normalize_images_in_post(md_path)
             if changed:
                 updated_posts += 1
             total_copied += copied
-    
+            cache[key] = {"mtime": mtime, "size": size}
+
+    _save_cache(cache)
+
     if updated_posts or total_copied:
         print(f"\n已处理图片: 更新{updated_posts}篇，复制{total_copied}张")
-    
+
     return updated_posts, total_copied
 
 
@@ -379,12 +413,23 @@ def download_all_external_images():
     if not os.path.exists(POSTS_DIR):
         return 0
 
+    cache = _load_cache()
     total = 0
     print("\n检查外部图片...")
     for f in sorted(os.listdir(POSTS_DIR)):
         if f.endswith(".md"):
-            _, count = download_external_images_in_post(os.path.join(POSTS_DIR, f))
+            md_path = os.path.join(POSTS_DIR, f)
+            mtime = os.path.getmtime(md_path)
+            size = os.path.getsize(md_path)
+            key = f + ":external"
+            cached = cache.get(key)
+            if cached and cached["mtime"] == mtime and cached["size"] == size:
+                continue
+            _, count = download_external_images_in_post(md_path)
             total += count
+            cache[key] = {"mtime": mtime, "size": size}
+
+    _save_cache(cache)
 
     if total:
         print(f"共处理 {total} 张外部图片\n")
@@ -465,7 +510,6 @@ def deploy_blog():
     today = date.today().isoformat()
 
     steps = [
-        ("清理旧文件", "npx hexo clean"),
         ("生成静态文件", "npx hexo generate"),
         ("拉取远程最新代码", "git pull --rebase --autostash origin master"),
         ("暂存所有变更", "git add ."),
